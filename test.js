@@ -1,9 +1,9 @@
 var myGamePiece;
-var myScore
+var myMsg;
 var a
 function startGame() {
     myForeground = new component(850, 50, "test3.png", 0, 445, "image");
-    myScore = new component("10px", "Arial Black", "black", 280, 40, "text");
+    myMsg = new component("10px", "Arial Black", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
     myBackground = new component(850, 480, "test2.png", 0, 0, "image");
     myGameArea.start();
@@ -87,11 +87,11 @@ function updateGameArea() {
     
   
     
-    myScore.text = a
+    myMsg.text = a
     
-    myScore.x = myGamePiece.x - b*5 + 24+b*2
-    myScore.y = myGamePiece.y - 10
-    myScore.update();
+    myMsg.x = myGamePiece.x - b*5 + 24+b*2
+    myMsg.y = myGamePiece.y - 10
+    myMsg.update();
   
 }
 function getMousePos(canvas, evt) {
