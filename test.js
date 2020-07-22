@@ -3,7 +3,7 @@ var myMsg;
 var a
 function startGame() {
     myForeground = new component(850, 50, "test3.png", 0, 445, "image");
-    myMsg = new component("10px", "Arial Black", "black", 280, 40, "text");
+    myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
     myBackground = new component(850, 480, "test2.png", 0, 0, "image");
     myGameArea.start();
@@ -89,8 +89,10 @@ function updateGameArea() {
     
     myMsg.text = a
     
-    myMsg.x = myGamePiece.x - b*5 + 24+b*2
+    myMsg.x = myGamePiece.x - b*5 + 24+b*2  
     myMsg.y = myGamePiece.y - 10
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(myMsg.x, myMsg.y-10, ctx.measureText(myMsg.text).width, 15);
     myMsg.update();
   
 }
@@ -104,7 +106,5 @@ function getMousePos(canvas, evt) {
 
 function send(){
   a = document.getElementById("text").value
-  setTimeout(function stopsend(){ a=""}, 8000)
+  setTimeout(function stopsend(){ a=""}, 4000)
 }
-
-
