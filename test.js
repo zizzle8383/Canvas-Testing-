@@ -112,6 +112,7 @@ function send(){
   setTimeout(function stopsend(){ a=""}, 4000)
 }
 function SetPFP(){
-  var link = document.getElementById("link").innerHTML
+   link = document.getElementById("link").value
   myGamePiece.image.src = link
+  myGamePiece.update();
 }
