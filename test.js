@@ -6,6 +6,7 @@ function startGame() {
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
     myBackground = new component(850, 480, "test2.png", 0, 0, "image");
+    myNextArea =  new component(50, 50, "test12.png", 425, 240, "image")
     myGameArea.start();
 }
 
@@ -79,6 +80,7 @@ function updateGameArea() {
     if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 5; }
     myBackground.newPos();
     myBackground.update();
+    myNextArea.update();
     myGamePiece.newPos();
     myGamePiece.update();
     myForeground.newPos();
@@ -108,4 +110,8 @@ function getMousePos(canvas, evt) {
 function send(){
   a = document.getElementById("text").value
   setTimeout(function stopsend(){ a=""}, 4000)
+}
+function SetPFP(){
+  var link = document.getElementById("link").innerHTML
+  myGamePiece.image.src = link
 }
