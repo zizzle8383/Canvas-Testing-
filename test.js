@@ -85,9 +85,11 @@ function updateGameArea() {
     myGamePiece.update();
     myForeground.newPos();
     myForeground.update();
-    
+    if (a !== ""){
     b = a.length;
-    
+    } else{ 
+      b = 0
+    }
   
     
     myMsg.text = a;
