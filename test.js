@@ -1,12 +1,12 @@
 var myGamePiece;
 var myMsg;
-var a
+var a;
 function startGame() {
     myForeground = new component(850, 50, "test3.png", 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
     myBackground = new component(850, 480, "test2.png", 0, 0, "image");
-    myNextArea =  new component(50, 50, "test12.png", 425, 240, "image")
+    myNextArea =  new component(50, 50, "test12.png", 425, 240, "image");
     myGameArea.start();
 }
 
@@ -33,7 +33,7 @@ var myGameArea = {
     stop : function() {
         clearInterval(this.interval);
     }
-}
+};
 
 function component(width, height, color, x, y, type) {
     this.type = type;
@@ -90,10 +90,10 @@ function updateGameArea() {
     
   
     
-    myMsg.text = a
+    myMsg.text = a;
     
-    myMsg.x = myGamePiece.x - b*5 + 24+b*2  
-    myMsg.y = myGamePiece.y - 10
+    myMsg.x = myGamePiece.x - b*5 + 24+b*2;  
+    myMsg.y = myGamePiece.y - 10;
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(myMsg.x, myMsg.y-10, ctx.measureText(myMsg.text).width, 15);
     myMsg.update();
@@ -108,11 +108,11 @@ function getMousePos(canvas, evt) {
 }
 
 function send(){
-  a = document.getElementById("text").value
-  setTimeout(function stopsend(){ a=""}, 4000)
+  a = document.getElementById("text").value;
+  setTimeout(function stopsend(){ a=""}, 4000);
 }
 function SetPFP(){
-   link = document.getElementById("link").value
-  myGamePiece.image.src = link
+   link = document.getElementById("link").value;
+  myGamePiece.image.src = link;
   myGamePiece.update();
 }
