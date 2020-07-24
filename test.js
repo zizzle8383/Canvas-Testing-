@@ -86,7 +86,7 @@ function updateGameArea() {
     myGamePiece.update();
     myForeground.newPos();
     myForeground.update();
-    if (Ac == true){
+    if (Ac === true){
     b = a.length;
  
   
@@ -98,7 +98,7 @@ function updateGameArea() {
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(myMsg.x, myMsg.y-10, ctx.measureText(myMsg.text).width, 15);
     myMsg.update();
-    };
+    }
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
