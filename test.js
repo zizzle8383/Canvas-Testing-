@@ -1,6 +1,7 @@
 var myGamePiece;
 var myMsg;
 var a;
+var Ac = false;
 function startGame() {
     myForeground = new component(850, 50, "test3.png", 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
@@ -85,11 +86,9 @@ function updateGameArea() {
     myGamePiece.update();
     myForeground.newPos();
     myForeground.update();
-    if (a !== ""){
+    if (Ac == true){
     b = a.length;
-    } else{ 
-      b = 0
-    }
+ 
   
     
     myMsg.text = a;
@@ -99,7 +98,7 @@ function updateGameArea() {
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(myMsg.x, myMsg.y-10, ctx.measureText(myMsg.text).width, 15);
     myMsg.update();
-  
+    };
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
@@ -110,6 +109,7 @@ function getMousePos(canvas, evt) {
 }
 
 function send(){
+  Ac = true
   a = document.getElementById("text").value;
   setTimeout(function stopsend(){ a=""}, 4000);
 }
