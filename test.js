@@ -8,6 +8,7 @@ function startGame() {
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
     myBackground = new component(850, 480, "test2.png", 0, 0, "image");
     myNextArea =  new component(50, 50, "test12.png", 425, 240, "image");
+    myHat =  new component(30, 30, "", 425, 240, "image");
     myGameArea.start();
 }
 
@@ -84,12 +85,15 @@ function updateGameArea() {
     myNextArea.update();
     myGamePiece.newPos();
     myGamePiece.update();
+    myHat.x = myGamePiece.x + 10;
+    myHat.y = myGamePiece.y - 20;
+    myHat.update();
     myForeground.newPos();
     myForeground.update();
     if (Ac === true){
     b = a.length;
  
-  
+   
     
     myMsg.text = a;
     
@@ -109,12 +113,19 @@ function getMousePos(canvas, evt) {
 }
 
 function send(){
-  Ac = true
+  Ac = true;
   a = document.getElementById("text").value;
   setTimeout(function stopsend(){ a=""}, 4000);
+  
+
+
 }
 function SetPFP(){
    link = document.getElementById("link").value;
   myGamePiece.image.src = link;
   myGamePiece.update();
+}
+
+function Hat(){
+  myHat.src = ""+document.getElementByid("HatTest").value +".png";
 }
