@@ -11,7 +11,7 @@ function startGame() {
     myBackground = new component(850, 480, "test2.png", 0, 0, "image");
     myNextArea =  new component(50, 50, "test12.png", 425, 240, "image");
     myHat =  new component(30, 30, "", 425, 240, "image");
-    myPet = new component(30, 25, "pet1.png", 425, 240, "image");
+    myPet = new component(30, 25, "pets/pet1.png", 425, 240, "image");
     myGameArea.start();
 }
 
