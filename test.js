@@ -8,7 +8,7 @@ function startGame() {
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
     myBackground = new component(850, 480, "test2.png", 0, 0, "image");
     myNextArea =  new component(50, 50, "test12.png", 425, 240, "image");
-    myHat =  new component(30, 30, "test12.png", 425, 240, "image");
+    myHat =  new component(30, 30, " ", 425, 240, "image");
     myGameArea.start();
 }
 
