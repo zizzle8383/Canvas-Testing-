@@ -127,5 +127,5 @@ function SetPFP(){
 }
 
 function Hat(){
-  myHat.image.src = "hats/"+document.getElementById("HatTest").value +".png";
+  myHat.image.src = "/hats/"+document.getElementById("HatTest").value +".png";
 }
