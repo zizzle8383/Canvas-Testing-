@@ -2,13 +2,16 @@ var myGamePiece;
 var myMsg;
 var a;
 var Ac = false;
+var petbounce = 2;
+var loop = true;
 function startGame() {
     myForeground = new component(850, 50, "test3.png", 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
     myBackground = new component(850, 480, "test2.png", 0, 0, "image");
     myNextArea =  new component(50, 50, "test12.png", 425, 240, "image");
-    myHat =  new component(30, 30, " ", 425, 240, "image");
+    myHat =  new component(30, 30, "", 425, 240, "image");
+    myPet = new component(30, 25, "pet1.png", 425, 240, "image");
     myGameArea.start();
 }
 
@@ -85,6 +88,9 @@ function updateGameArea() {
     myNextArea.update();
     myGamePiece.newPos();
     myGamePiece.update();
+    myPet.x = myGamePiece.x - 30;
+    pet();
+    myPet.update();
     myHat.x = myGamePiece.x + 10;
     myHat.y = myGamePiece.y - 20;
     myHat.update();
@@ -128,4 +134,17 @@ function SetPFP(){
 
 function Hat(){
   myHat.image.src = "hats/"+document.getElementById("HatTest").value +".png";
+}
+
+function pet(){
+  if (petbounce <=20 && loop === true){
+   petbounce = petbounce + 1;
+  }else if(petbounce >= 1){
+    loop = false;
+    petbounce = petbounce - 1;
+  }else{
+    loop = true;
+  }
+  myPet.y = myGamePiece.y + 10 + petbounce;
+  
 }
