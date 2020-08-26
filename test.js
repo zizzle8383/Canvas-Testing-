@@ -1,6 +1,8 @@
 var myGamePiece;
 var myMsg;
 var a;
+var numba = 0
+var rooms = {"Original","Room2")
 var room = "Original"
 var Ac = false;
 var petbounce = 2;
@@ -110,6 +112,17 @@ function updateGameArea() {
     ctx.fillRect(myMsg.x, myMsg.y-10, ctx.measureText(myMsg.text).width, 15);
     myMsg.update();
     }
+  if (myGamePiece.x >= 820){
+     myGamePiece.x = 50
+      if (numba !== 1){
+      numba =  numba + 1
+      } else{
+          numba = 0
+      }
+     room = rooms(numba)
+     myBackground.image.src = "Rooms/"+JSON.parse(room)+"/bg.png"
+     myForeground.image.src = "Rooms/"+JSON.parse(room)+"/FG.png"
+  }
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
@@ -131,6 +144,7 @@ function SetPFP(){
    link = document.getElementById("link").value;
   myGamePiece.image.src = link;
   myGamePiece.update();
+  
 }
 
 function Hat(){
