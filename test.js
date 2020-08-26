@@ -119,7 +119,7 @@ function updateGameArea() {
       } else{
           numba = 0
       }
-     room = rooms(numba)
+     room = rooms[numba]
      myBackground.image.src = "Rooms/"+JSON.parse(room)+"/bg.png"
      myForeground.image.src = "Rooms/"+JSON.parse(room)+"/FG.png"
   }
