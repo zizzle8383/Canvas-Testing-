@@ -1,14 +1,15 @@
 var myGamePiece;
 var myMsg;
 var a;
+var room = "Original"
 var Ac = false;
 var petbounce = 2;
 var loop = true;
 function startGame() {
-    myForeground = new component(850, 50, "test3.png", 0, 445, "image");
+    myForeground = new component(850, 50, "Rooms/Original/FG.png", 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
-    myBackground = new component(850, 480, "test2.png", 0, 0, "image");
+    myBackground = new component(850, 480, "Rooms/Original/bg.png", 0, 0, "image");
     myNextArea =  new component(50, 50, "test12.png", 425, 240, "image");
     myHat =  new component(30, 30, "", 425, 240, "image");
     myPet = new component(30, 25, "pets/pet1.png", 425, 240, "image");
