@@ -2,7 +2,7 @@ var myGamePiece;
 var myMsg;
 var a;
 var numba = 0
-var rooms = {"Original","Room2")
+var rooms = ["Original","Room2"]
 var room = "Original"
 var Ac = false;
 var petbounce = 2;
