@@ -112,8 +112,22 @@ function updateGameArea() {
     ctx.fillRect(myMsg.x, myMsg.y-10, ctx.measureText(myMsg.text).width, 15);
     myMsg.update();
     }
+    
+  if (myGamePiece.x <= 30){
+     myGamePiece.x = 425
+      if (numba !== 0){
+      numba =  numba + 1
+      } else{
+          numba = 1
+      }
+     room = rooms[numba]
+     room =  room.replace(/["']/g, "");
+     myBackground.image.src = "Rooms/"+room+"/bg.png"
+     myForeground.image.src = "Rooms/"+room+"/FG.png"
+  }
+    
   if (myGamePiece.x >= 820){
-     myGamePiece.x = 100
+     myGamePiece.x = 425
       if (numba !== 1){
       numba =  numba + 1
       } else{
@@ -124,18 +138,8 @@ function updateGameArea() {
      myBackground.image.src = "Rooms/"+room+"/bg.png"
      myForeground.image.src = "Rooms/"+room+"/FG.png"
   }
-  if (myGamePiece.x = 0){
-     myGamePiece.x = 800
-      if (numba !== 0){
-      numba =  numba - 1
-      } else{
-          numba = 1
-      }
-     room = rooms[numba]
-     room =  room.replace(/["']/g, "");
-     myBackground.image.src = "Rooms/"+room+"/bg.png"
-     myForeground.image.src = "Rooms/"+room+"/FG.png"
-  }
+    
+    
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
