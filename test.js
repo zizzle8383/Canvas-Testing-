@@ -113,7 +113,7 @@ function updateGameArea() {
     myMsg.update();
     }
   if (myGamePiece.x >= 820){
-     myGamePiece.x = 50
+     myGamePiece.x = 100
       if (numba !== 1){
       numba =  numba + 1
       } else{
@@ -125,7 +125,7 @@ function updateGameArea() {
      myForeground.image.src = "Rooms/"+room+"/FG.png"
   }
   if (myGamePiece.x = 0){
-     myGamePiece.x = 50
+     myGamePiece.x = 800
       if (numba !== 0){
       numba =  numba - 1
       } else{
