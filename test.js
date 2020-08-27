@@ -116,7 +116,7 @@ function updateGameArea() {
   if (myGamePiece.x <= 30){
      myGamePiece.x = 425
       if (numba !== 0){
-      numba =  numba + 1
+      numba =  numba - 1
       } else{
           numba = 1
       }
