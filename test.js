@@ -120,8 +120,9 @@ function updateGameArea() {
           numba = 0
       }
      room = rooms[numba]
-     myBackground.image.src = "Rooms/"+JSON.parse(room)+"/bg.png"
-     myForeground.image.src = "Rooms/"+JSON.parse(room)+"/FG.png"
+     room =  room.replace(/["']/g, "");
+     myBackground.image.src = "Rooms/"+room+"/bg.png"
+     myForeground.image.src = "Rooms/"+room+"/FG.png"
   }
 }
 function getMousePos(canvas, evt) {
