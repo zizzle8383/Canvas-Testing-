@@ -124,6 +124,18 @@ function updateGameArea() {
      myBackground.image.src = "Rooms/"+room+"/bg.png"
      myForeground.image.src = "Rooms/"+room+"/FG.png"
   }
+  if (myGamePiece.x = 0){
+     myGamePiece.x = 50
+      if (numba !== 0){
+      numba =  numba - 1
+      } else{
+          numba = 1
+      }
+     room = rooms[numba]
+     room =  room.replace(/["']/g, "");
+     myBackground.image.src = "Rooms/"+room+"/bg.png"
+     myForeground.image.src = "Rooms/"+room+"/FG.png"
+  }
 }
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
