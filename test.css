@@ -9,4 +9,10 @@ body{
   font-size:30px;
   text-align:center;
   background-color:purple;
+  border-radius:12px;
+  transition-duration: 0.4s;
 }
+#play:hover{
+  font-size:15px;
+}
+  
