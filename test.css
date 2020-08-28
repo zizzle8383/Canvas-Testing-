@@ -4,3 +4,9 @@ body{
   background-image: linear-gradient(to right, purple , blue);
 }
 
+#playbutton{
+  border-style:none;
+  font-size:30px;
+  text-align:center;
+  background-color:purple;
+}
