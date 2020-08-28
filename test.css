@@ -4,7 +4,7 @@ body{
   background-image: linear-gradient(to right, purple , blue);
 }
 
-#playbutton{
+#play{
   border-style:none;
   font-size:30px;
   text-align:center;
