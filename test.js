@@ -13,6 +13,9 @@ function startGame() {
     document.getElementById("text").style.visibility = "visible"
     document.getElementById("link").style.visibility = "visible"
     document.getElementById("HatTest").style.visibility = "visible"
+    document.getElementById("button1").style.visibility = "visible"
+    document.getElementById("button2").style.visibility = "visible"
+    document.getElementById("button3").style.visibility = "visible"
     myMusic = new sound("titleconcept.mp3");
     myMusic.play();
     myForeground = new component(850, 50, "Rooms/Original/FG.png", 0, 445, "image");
