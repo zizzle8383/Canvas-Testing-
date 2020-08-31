@@ -16,7 +16,7 @@ body{
   transition-duration: 0.4s;
 }
 #play:hover{
-  border-radius:15px;
+  
   border-style:solid;
   
 }
