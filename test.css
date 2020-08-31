@@ -5,6 +5,7 @@ body{
 }
 
 #play{
+  position:absolute;
   bottom:50%;
   border-style:none;
   font-size:30px;
