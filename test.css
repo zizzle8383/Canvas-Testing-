@@ -5,6 +5,7 @@ body{
 }
 
 #play{
+  outline:none;
   position:absolute;
   bottom:50%;
   right:46%;
