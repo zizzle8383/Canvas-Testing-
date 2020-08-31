@@ -8,6 +8,11 @@ var room = "Original"
 var Ac = false;
 var petbounce = 2;
 var loop = true;
+
+function start(){
+    document.getElementById("play").style.visibility = "hidden"
+    setTimeout(startGame,500)
+}
 function startGame() {
     document.getElementById("text").style.visibility = "visible"
     document.getElementById("link").style.visibility = "visible"
