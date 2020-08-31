@@ -11,14 +11,14 @@ body{
   border-style:none;
   font-size:50px;
   text-align:center;
-  background-color:purple;
+  background-color:#880085;
   border-radius:12px;
   transition-duration: 0.4s;
 }
 #play:hover{
   
-  border-radius:15px;
-  
+  border-radius:20px;
+  background-color:purple;
 }
   
 h1{
