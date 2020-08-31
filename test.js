@@ -1,6 +1,7 @@
 var myGamePiece;
 var myMsg;
 var a;
+var myMusic;
 var numba = 0
 var rooms = ["Original","Room2"]
 var room = "Original"
@@ -8,6 +9,8 @@ var Ac = false;
 var petbounce = 2;
 var loop = true;
 function startGame() {
+    myMusic = new sound("titleconcept.mp3");
+    myMusic.play();
     myForeground = new component(850, 50, "Rooms/Original/FG.png", 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "test12.png", 425, 240, "image");
@@ -179,4 +182,21 @@ function pet(){
   }
   myPet.y = myGamePiece.y + 10 + petbounce;
   
+}
+
+
+
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
 }
