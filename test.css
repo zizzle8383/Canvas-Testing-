@@ -16,7 +16,9 @@ body{
   transition-duration: 0.4s;
 }
 #play:hover{
-  font-size:47.5px;
+  border-radius:15px;
+  border-style:solid;
+  
 }
   
 h1{
