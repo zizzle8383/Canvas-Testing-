@@ -15,7 +15,7 @@ function startGame() {
     document.getElementById("button1").style.visibility = "visible"
     document.getElementById("button2").style.visibility = "visible"
     document.getElementById("button3").style.visibility = "visible"
-    document.getElementById("play").style.visibility = "hidden"
+    
     myMusic = new sound("titleconcept.mp3");
     myMusic.play();
     myForeground = new component(850, 50, "Rooms/Original/FG.png", 0, 445, "image");
