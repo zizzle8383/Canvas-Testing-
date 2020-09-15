@@ -220,8 +220,3 @@ function sound(src) {
     }    
 }
 
-    window.addEventListener("mousedown", function (e) {
-        position = getMousePos(myGameArea.canvas, e);
-        myGamePiece.x =  position.x
-        myGamePiece.y = position.y
-     });
