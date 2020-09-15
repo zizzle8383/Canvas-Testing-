@@ -59,7 +59,7 @@ var myGameArea = {
          
           myGamePiece.x += vx
           myGamePiece.y += vy
-          )
+        }
      });
 
     },
