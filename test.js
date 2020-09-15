@@ -10,6 +10,7 @@ var petbounce = 2;
 var loop = true;
 var vx
 var vy
+var numb1 
 function start(){
     document.getElementById("play").style.visibility = "hidden"
     setTimeout(startGame,500)
@@ -53,9 +54,18 @@ var myGameArea = {
      window.addEventListener("mousedown", function (e) {
       position = getMousePos(myGameArea.canvas, e);
          
-         
-          myGamePiece.x = position.x/myGamePiece.x
-          myGamePiece.y = position.y/myGamePiece.y
+          while (myGamePiece.x !== position.x && myGamePiece.y !== position.y){
+           if (myGamePiece.x < position.x){   
+              myGamePiece.x += 1
+          }else if (myGamePiece.x > position.x){
+              myGamePiece.x -= 1
+          }
+          if (myGamePiece.y < position.y){   
+              myGamePiece.y += 1
+          }else if (myGamePiece.y > position.y){
+              myGamePiece.y -= 1
+        } 
+
         
      });
 
