@@ -53,7 +53,7 @@ var myGameArea = {
      window.addEventListener("mousedown", function (e) {
       position = getMousePos(myGameArea.canvas, e);
          vx = 1
-         while (vx !== 0 && vy !== 0)
+         while (vx !== 0 && vy !== 0){
           vx = myGamePiece.x / position.x
           vy = myGamePiece.y / position.y
          
