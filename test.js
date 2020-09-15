@@ -54,8 +54,8 @@ var myGameArea = {
       position = getMousePos(myGameArea.canvas, e);
          
          
-          myGamePiece.x = myGamePiece.x/position.x
-          myGamePiece.y = myGamePiece.y/position.y
+          myGamePiece.x = position.x/myGamePiece.x
+          myGamePiece.y = position.y/myGamePiece.y
         
      });
 
