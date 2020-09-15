@@ -58,7 +58,7 @@ var myGameArea = {
           vy = myGamePiece.y / position.y
          
           myGamePiece.x += vx
-          myGamePiece.y += vy\
+          myGamePiece.y += vy
           )
      });
 
