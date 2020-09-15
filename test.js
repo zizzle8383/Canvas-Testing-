@@ -51,8 +51,10 @@ var myGameArea = {
     });
      window.addEventListener("mousedown", function (e) {
       position = getMousePos(myGameArea.canvas, e);
-      myGamePiece.x =  position.x
-      myGamePiece.y = position.y
+      while (myGamePiece.x !== position.x && myGamePiece.y !== position.y){
+          myGamePiece.x =  myGamePiece.x/position.x
+          myGamePiece.y = myGamePiece.y/position.y
+      }
      });
 
     },
