@@ -51,7 +51,8 @@ var myGameArea = {
     window.addEventListener('keyup', function (e) {
       myGameArea.keys[e.keyCode] = false;
     });
-     window.addEventListener("mousedown", function (e) {
+    
+      window.addEventListener("mousedown", function (e) {
       position = getMousePos(myGameArea.canvas, e);
          
           while (myGamePiece.x !== position.x && myGamePiece.y !== position.y){
@@ -66,7 +67,7 @@ var myGameArea = {
               myGamePiece.y -= 1
         } 
 
-        
+      }
      });
 
     },
