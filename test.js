@@ -8,7 +8,8 @@ var room = "Original"
 var Ac = false;
 var petbounce = 2;
 var loop = true;
-
+var vx
+var vy
 function start(){
     document.getElementById("play").style.visibility = "hidden"
     setTimeout(startGame,500)
@@ -51,10 +52,14 @@ var myGameArea = {
     });
      window.addEventListener("mousedown", function (e) {
       position = getMousePos(myGameArea.canvas, e);
-      while (myGamePiece.x !== position.x && myGamePiece.y !== position.y){
-          myGamePiece.x =  myGamePiece.x/position.x
-          myGamePiece.y = myGamePiece.y/position.y
-      }
+         vx = 1
+         while (vx !== 0 && vy !== 0)
+          vx = myGamePiece.x / position.x
+          vy = myGamePiece.y / position.y
+         
+          myGamePiece.x += vx
+          myGamePiece.y += vy\
+          )
      });
 
     },
