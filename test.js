@@ -49,7 +49,11 @@ var myGameArea = {
     window.addEventListener('keyup', function (e) {
       myGameArea.keys[e.keyCode] = false;
     });
-        },
+    window.addEventListener("mousedown", function (e) {
+        position = getMousePos(myGameArea.canvas, e);
+        myGamePiece.x =  position.x
+        myGamePiece.y = position.y
+     });
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
