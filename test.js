@@ -62,6 +62,7 @@ var myGameArea = {
          position.x = Math.round(position.x)
          position.y = Math.round(position.y)
           if (walking == 0){ 
+            walking = 1
          int1 = setInterval(Loop1,10)
           }
      });
@@ -237,7 +238,7 @@ function sound(src) {
 
 function Loop1(){
     
-        walking = 1
+        
     if (myGamePiece.x < position.x){   
               myGamePiece.x += 1
           }else if (myGamePiece.x > position.x){
