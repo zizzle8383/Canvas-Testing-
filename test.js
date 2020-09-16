@@ -238,7 +238,7 @@ function Loop1(){
           }else if (myGamePiece.y > position.y){
               myGamePiece.y -= 1
         } 
-    if (myGamepeice.x == position.x && myGamepeice.y == position.y){
+    if (myGamePeice.x == position.x && myGamePeice.y == position.y){
         clearInterval(int1)
     }
 }
