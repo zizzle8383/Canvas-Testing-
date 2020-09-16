@@ -157,7 +157,7 @@ function updateGameArea() {
      room =  room.replace(/["']/g, "");
      myBackground.image.src = "Rooms/"+room+"/bg.png"
      myForeground.image.src = "Rooms/"+room+"/FG.png"
-     clearInterval(int1)
+     
      
   }
     
