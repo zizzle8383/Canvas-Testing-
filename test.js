@@ -249,8 +249,9 @@ function Loop1(){
               myGamePiece.y -= 1
         } 
     if (myGamePiece.x == position.x && myGamePiece.y == position.y||currentroom !== room){
-        clearInterval(int1)
         walking = 0
+        clearInterval(int1)
+        
 
   }
 }
