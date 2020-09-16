@@ -234,7 +234,8 @@ function sound(src) {
 }
 
 function Loop1(){
-    
+    if (walking = 0){ 
+        walking = 1
     if (myGamePiece.x < position.x){   
               myGamePiece.x += 1
           }else if (myGamePiece.x > position.x){
@@ -247,6 +248,9 @@ function Loop1(){
         } 
     if (myGamePiece.x == position.x && myGamePiece.y == position.y||currentroom !== room){
         clearInterval(int1)
+        walking = 0
     }
+  }
 }
+    
 
