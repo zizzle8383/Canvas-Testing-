@@ -13,6 +13,7 @@ var vy
 var numb1 
 var int1
 var stoploop
+var currentroom
 function start(){
     document.getElementById("play").style.visibility = "hidden"
     setTimeout(startGame,500)
@@ -55,7 +56,7 @@ var myGameArea = {
     });
     
       window.addEventListener("mousedown", function (e) {
-         
+         currentroom = room
          position = getMousePos(myGameArea.canvas, e);
          position.x = Math.round(position.x)
          position.y = Math.round(position.y)
@@ -154,7 +155,7 @@ function updateGameArea() {
      myBackground.image.src = "Rooms/"+room+"/bg.png"
      myForeground.image.src = "Rooms/"+room+"/FG.png"
      clearInterval(int1)
-     function clear1(){clearInterval(int1) console.log("clearedint")}
+     
   }
     
   if (myGamePiece.x >= 820){
@@ -168,7 +169,7 @@ function updateGameArea() {
      room =  room.replace(/["']/g, "");
      myBackground.image.src = "Rooms/"+room+"/bg.png"
      myForeground.image.src = "Rooms/"+room+"/FG.png"
-     function clear(){clearInterval(int1) console.log("clearedint")}
+     
      
   }
     
@@ -233,6 +234,7 @@ function sound(src) {
 }
 
 function Loop1(){
+    
     if (myGamePiece.x < position.x){   
               myGamePiece.x += 1
           }else if (myGamePiece.x > position.x){
@@ -243,7 +245,7 @@ function Loop1(){
           }else if (myGamePiece.y > position.y){
               myGamePiece.y -= 1
         } 
-    if (myGamePiece.x == position.x && myGamePiece.y == position.y){
+    if (myGamePiece.x == position.x && myGamePiece.y == position.y||currentroom !== room){
         clearInterval(int1)
     }
 }
