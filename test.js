@@ -226,7 +226,7 @@ function sound(src) {
     }    
 }
 
-function loop1{
+function loop1(){
     if (myGamePiece.x < position.x){   
               myGamePiece.x += 1
           }else if (myGamePiece.x > position.x){
