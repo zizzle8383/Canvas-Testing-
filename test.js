@@ -15,6 +15,7 @@ var int1
 var stoploop
 var currentroom
 var walking = 0
+
 function start(){
     document.getElementById("play").style.visibility = "hidden"
     setTimeout(startGame,500)
