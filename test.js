@@ -63,7 +63,7 @@ var myGameArea = {
          position.y = Math.round(position.y)
           if (walking == 0){ 
             walking = 1
-         int1 = setInterval(Loop1,10)
+         int1 = setInterval(Loop1,1)
           }
      });
 
