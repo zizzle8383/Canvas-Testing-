@@ -235,7 +235,7 @@ function sound(src) {
 }
 
 function Loop1(){
-    if (walking = 0){ 
+    if (walking == 0){ 
         walking = 1
     if (myGamePiece.x < position.x){   
               myGamePiece.x += 1
