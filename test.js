@@ -57,6 +57,7 @@ var myGameArea = {
       window.addEventListener("mousedown", function (e) {
          
          position = getMousePos(myGameArea.canvas, e);
+         position = Math.round(position)
          int1 = setInterval(Loop1,100)
   
      });
