@@ -154,7 +154,7 @@ function updateGameArea() {
      myBackground.image.src = "Rooms/"+room+"/bg.png"
      myForeground.image.src = "Rooms/"+room+"/FG.png"
      clearInterval(int1)
-     
+     function clear1(){clearInterval(int1) console.log("clearedint")}
   }
     
   if (myGamePiece.x >= 820){
@@ -168,7 +168,7 @@ function updateGameArea() {
      room =  room.replace(/["']/g, "");
      myBackground.image.src = "Rooms/"+room+"/bg.png"
      myForeground.image.src = "Rooms/"+room+"/FG.png"
-     clearInterval(int1)
+     function clear(){clearInterval(int1) console.log("clearedint")}
      
   }
     
