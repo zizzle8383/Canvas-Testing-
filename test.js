@@ -11,6 +11,8 @@ var loop = true;
 var vx
 var vy
 var numb1 
+var int1
+var stoploop
 function start(){
     document.getElementById("play").style.visibility = "hidden"
     setTimeout(startGame,500)
@@ -53,21 +55,10 @@ var myGameArea = {
     });
     
       window.addEventListener("mousedown", function (e) {
-      position = getMousePos(myGameArea.canvas, e);
          
-          while (myGamePiece.x !== position.x && myGamePiece.y !== position.y){
-           if (myGamePiece.x < position.x){   
-              myGamePiece.x += 1
-          }else if (myGamePiece.x > position.x){
-              myGamePiece.x -= 1
-          }
-          if (myGamePiece.y < position.y){   
-              myGamePiece.y += 1
-          }else if (myGamePiece.y > position.y){
-              myGamePiece.y -= 1
-        } 
-
-      }
+         position = getMousePos(myGameArea.canvas, e);
+         int1 = setInterval(Loop1,100)
+  
      });
 
     },
@@ -233,5 +224,21 @@ function sound(src) {
     this.stop = function(){
         this.sound.pause();
     }    
+}
+
+function loop1{
+    if (myGamePiece.x < position.x){   
+              myGamePiece.x += 1
+          }else if (myGamePiece.x > position.x){
+              myGamePiece.x -= 1
+          }
+          if (myGamePiece.y < position.y){   
+              myGamePiece.y += 1
+          }else if (myGamePiece.y > position.y){
+              myGamePiece.y -= 1
+        } 
+    if (myGamepeice.x == position.x && myGamepeice.y == position.y){
+        clearInterval(int1)
+    }
 }
 
