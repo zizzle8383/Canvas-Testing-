@@ -61,7 +61,7 @@ var myGameArea = {
          currentroom = room
          position = getMousePos(myGameArea.canvas, e);
          position.x = Math.round(position.x)+10
-         position.y = Math.round(position.y)+10
+         position.y = Math.round(position.y)+5
           if (walking == 0){ 
           if (position.y > 0 && position.y < 480){
           if (position.x > 0 && position.x < 850){
