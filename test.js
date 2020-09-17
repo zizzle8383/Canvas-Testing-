@@ -96,10 +96,7 @@ function component(width, height, color, x, y, type) {
     this.update = function() {
         ctx = myGameArea.context;
         if (type == "image") {
-            ctx.drawImage(this.image, 
-                this.x, 
-                this.y,
-                this.width, this.height);
+            ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         } else if (type == "text") {
              ctx.font = `${this.width} ${this.height}`;
              ctx.fillStyle = color;
