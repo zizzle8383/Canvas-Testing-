@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/css" href="test.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
-    text-align:center;
-}
-</style>
-<script src="test.js">
-
-</script>
-</head>
-<body>
-  <div id="other-divs">
-  <button onclick="start()" id="play">Play!</button>
-  </div>
-  <br>
-<div id="canvas-container">
- 
- </div>
-<div id="other-divs">
-<input id="text" style = "visibility:hidden">
-<button onclick="send()" id="button1" style = "visibility:hidden">Send</button>
-<br>
-
-
-<input id="link" style = "visibility:hidden">
-<button onclick="SetPFP()" id="button2" style = "visibility:hidden">Set as pfp</button>
-<br>
-<input id="HatTest" style = "visibility:hidden">
-<button onclick="Hat()" id="button3" style = "visibility:hidden">Change Hat</button>
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-<iframe src="https://discord.com/widget?id=735949220661428325&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-</body>
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      canvas {
+          border:1px solid #d3d3d3;
+          background-color: #f1f1f1;
+          text-align:center;
+      }
+    </style>
+    <script src="test.js"></script>
+  </head>
+  <body>
+    <div class="other-divs">
+      <button onclick="start();" id="play">Play!</button>
+    </div>
+    <br />
+    <div id="canvas-container"></div>
+    <div class="other-divs">
+      <form action="javascript:send();">
+        <input type="text" id="msg-text" style="visibility:hidden" />
+        <input type="submit" onclick="send();" id="msg-send" style="visibility:hidden" value="Send" />
+      </form>
+      <form action="javascript:setPFP();">
+        <input type="text" id="pfp-link" style="visibility:hidden" />
+        <input type="submit" onclick="setPFP();" id="pfp-set" style="visibility:hidden" value="Set as pfp" />
+      </form>
+      <form action="javascript:updateHat();">
+        <input type="text" id="hat-test" style="visibility:hidden">
+        <input type="submit" onclick="updateHat();" id="hat-set" style="visibility:hidden" value="Change Hat" />
+      </form>
+    </div>
+    <br />
+    <div>
+      <iframe src="https://discord.com/widget?id=735949220661428325&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+  </body>
 </html>
