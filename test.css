@@ -38,3 +38,8 @@ h2 {
   text-align: center;
 }
 
+#widgetbot {
+  top: 100%;
+  right: 22%;
+  position:absolute;
+}
