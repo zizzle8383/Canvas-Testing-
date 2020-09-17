@@ -59,7 +59,7 @@ var myGameArea = {
         });
         this.canvas.addEventListener("mousedown", function (e) {
             currentroom = room;
-            vpos = Math.round(getMousePos(myGameArea.canvas, e));
+            vpos = getMousePos(myGameArea.canvas, e);
             vpos.x -= 25;
             vpos.y -= 45;
             if (!walking) {
