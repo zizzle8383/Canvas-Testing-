@@ -117,18 +117,6 @@ function updateGameArea() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
 
-    if (myGameArea.keys && myGameArea.keys[37]) {
-        myGamePiece.speedX = -5;
-    }
-    if (myGameArea.keys && myGameArea.keys[39]) {
-        myGamePiece.speedX = 5;
-    }
-    if (myGameArea.keys && myGameArea.keys[38]) {
-        myGamePiece.speedY = -5;
-    }
-    if (myGameArea.keys && myGameArea.keys[40]) {
-        myGamePiece.speedY = 5;
-    }
 
     myBackground.newPos();
     myBackground.update();
