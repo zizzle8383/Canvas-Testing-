@@ -139,7 +139,7 @@ function updateGameArea() {
         myMsg.update();
     }
     
-    if (myGamePiece.x <= 50) {
+    if (myGamePiece.x <= 30) {
         myGamePiece.x = 425
         if (roomID != 0) {
             roomID--;
@@ -151,7 +151,7 @@ function updateGameArea() {
         myForeground.image.src = `./rooms/${room}/fg.png`;
     }
     
-    if (myGamePiece.x >= 800){
+    if (myGamePiece.x >= 820){
         myGamePiece.x = 425;
         if (roomID != 1) {
             roomID++;
