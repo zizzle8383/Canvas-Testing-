@@ -64,7 +64,7 @@ var myGameArea = {
             vpos.x -= 25;
             vpos.y -= 45;
 	    if (vpos.x < 0){vpos.x=1}
-            if (!Walking){
+            if (!walking){
                 if (vpos.y > 0 && vpos.y < 480) {
                     if (vpos.x > 0 && vpos.x < 850){
                         walking = true;
