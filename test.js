@@ -49,7 +49,7 @@ var myGameArea = {
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
-
+        walking = false;
         document.getElementById("canvas-container").insertBefore(this.canvas, null);
         window.addEventListener("keydown", function (e) {
             myGameArea.keys = (myGameArea.keys || []);
