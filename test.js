@@ -170,7 +170,7 @@ function getMousePos(canvas, evt) {
 	PositionX = evt.clientX - rect.left
 	if (PositionX < 0){
 		PositionX = 1
-	}else{ PositionX =  evt.clientX - rect.left}
+	}else{ PositionX = rect.left}
     return {
        "x": evt.clientX - PositionX,
        "y": evt.clientY - rect.top
