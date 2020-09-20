@@ -153,7 +153,7 @@ function updateGameArea() {
         myForeground.image.src = `./rooms/${room}/fg.png`;
     }
     
-    if (myGamePiece.x >= 800){
+    if (myGamePiece.x >= 750){
         myGamePiece.x = 425;
         if (roomID != 1) {
             roomID++;
