@@ -6,7 +6,7 @@ var roomID = 0;
 var room = "original";
 var petbounce = 2;
 var petLoop = true;
-var walking = false;
+
 var pet = "pet1";
 var PositionX
 var vpos = {
@@ -63,14 +63,14 @@ var myGameArea = {
             vpos = getMousePos(myGameArea.canvas, e);
             vpos.x -= 25;
             vpos.y -= 45;
-            if (!walking) {
+            
                 if (vpos.y > 0 && vpos.y < 480) {
                     if (vpos.x > 0 && vpos.x < 850){
                         walking = true;
                         requestAnimationFrame(updateChar);
                     }
                 }
-            }
+            
         });
 
     },
