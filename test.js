@@ -63,14 +63,15 @@ var myGameArea = {
             vpos = getMousePos(myGameArea.canvas, e);
             vpos.x -= 25;
             vpos.y -= 45;
-            
+	    if (vpos.x < 0){vpos.x=1}
+            if (!Walking){
                 if (vpos.y > 0 && vpos.y < 480) {
                     if (vpos.x > 0 && vpos.x < 850){
                         walking = true;
                         requestAnimationFrame(updateChar);
                     }
                 }
-            
+	    }
         });
 
     },
@@ -167,12 +168,10 @@ function updateGameArea() {
 
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
-	PositionX = evt.clientX - rect.left
-	if (PositionX < 0){
-		PositionX = 1
-	}else{ PositionX = rect.left}
+	
+	
     return {
-       "x": evt.clientX - PositionX,
+       "x": evt.clientX - rect.left,
        "y": evt.clientY - rect.top
     };
 }
