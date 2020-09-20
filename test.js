@@ -166,9 +166,14 @@ function updateGameArea() {
 
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
+	if (rect.left < 0){
+		PositionX = 0
+	   }else{ 
+		 PositionX = rect.left
+		}
     return {
-       "x": evt.clientX,
-       "y": evt.clientY 
+       "x": evt.clientX - PositionX,
+       "y": evt.clientY - rect.top
     };
 }
 
