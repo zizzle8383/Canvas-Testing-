@@ -33,7 +33,7 @@ function startGame() {
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "./player.png", 425, 240, "image");
     myBackground = new component(850, 480, `rooms/${room}/bg.png`, 0, 0, "image");
-    myNextArea = new component(50, 50, "./player.png", 425, 240, "image");
+   
     myHat = new component(30, 30, "", 425, 240, "image");
     myPet = new component(30, 25, `./pets/${pet}.png`, 425, 240, "image");
     vpos.x = myGamePiece.x;
@@ -122,7 +122,7 @@ function updateGameArea() {
 
     myBackground.newPos();
     myBackground.update();
-    myNextArea.update();
+    
     myGamePiece.newPos();
     myGamePiece.update();
     myPet.x = myGamePiece.x - 30;
