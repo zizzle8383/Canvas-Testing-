@@ -146,7 +146,7 @@ function updateGameArea() {
         myMsg.update();
     }
    if (myGamePiece.x > myNextArea.x && myGamePiece.x < myNextArea.x+myNextArea.width && myGamePiece.y > myNextArea.y && myGamePiece.y < myNextArea.y+myNextArea.height){
-         console.log("check Done!")
+         console.log("Loading Next Room!")
 	  if (roomID != 1) {
             roomID++;
         } else{
@@ -160,7 +160,7 @@ function updateGameArea() {
    }
 
    if (myGamePiece.x > myPrevArea.x && myGamePiece.x < myPrevArea.x+myPrevArea.width && myGamePiece.y > myPrevArea.y && myGamePiece.y < myPrevArea.y+myPrevArea.height){
-      console.log("Check Done!")
+      console.log("Loading Previous Room!")
 	  if (roomID != 0) {
             roomID--;
         } else{
