@@ -155,6 +155,7 @@ function updateGameArea() {
         room = rooms[roomID].replace(/['']/g, "");
         myBackground.image.src = `./rooms/${room}/bg.png`;
         myForeground.image.src = `./rooms/${room}/fg.png`;
+	myGamePiece.x = 425
       }
    }
 }
@@ -168,6 +169,8 @@ function updateGameArea() {
         room = rooms[roomID].replace(/['']/g, "");
         myBackground.image.src = `./rooms/${room}/bg.png`;
         myForeground.image.src = `./rooms/${room}/fg.png`;
+	myGamePiece.x = 425
+	
       }
    }
 }
