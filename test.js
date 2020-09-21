@@ -158,7 +158,7 @@ function updateGameArea() {
 	myGamePiece.x = 425
       }
    }
-}
+
    if (myGamePiece.x > myPrevArea.x && myGamePiece.x < myPrevArea.x+myPrevArea.width){
       if (myGamePiece.y > myPrevArea.y && myGamePiece.y < myPrevArea.y+myPrevArea.height){
 	  if (roomID != 0) {
