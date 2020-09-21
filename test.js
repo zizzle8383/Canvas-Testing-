@@ -32,8 +32,8 @@ function startGame() {
     myForeground = new component(850, 50, `./rooms/${room}/fg.png`, 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "./player.png", 425, 240, "image");
-    myNextArea =new component(50, 480, "./player.png", 800, 0, "image");
-    myPrevArea =new component(50, 480, "./player.png", 0, 0, "image");
+    myNextArea =new component(50, 480, "./bordertest.png", 800, 0, "image");
+    myPrevArea =new component(50, 480, "./bordertest.png", 0, 0, "image");
     myBackground = new component(850, 480, `rooms/${room}/bg.png`, 0, 0, "image");
     
     myHat = new component(30, 30, "", 425, 240, "image");
