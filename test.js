@@ -159,7 +159,7 @@ function updateGameArea() {
       
    }
 
-   if (myGamePiece.x > myPrevArea.x && myGamePiece.x < myPrevArea.x+myPrevArea.width && myGamePiece.y > myPrevArea.y && myGamePiece.y < myPrevArea.y+myPrevArea.height){
+   if (myGamePiece.x > myPrevArea.x && myGamePiece.x < myPrevArea.x-myPrevArea.width && myGamePiece.y > myPrevArea.y && myGamePiece.y < myPrevArea.y+myPrevArea.height){
       console.log("Loading Previous Room!")
 	  if (roomID != 0) {
             roomID--;
