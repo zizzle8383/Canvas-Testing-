@@ -32,8 +32,10 @@ function startGame() {
     myForeground = new component(850, 50, `./rooms/${room}/fg.png`, 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
     myGamePiece = new component(50, 50, "./player.png", 425, 240, "image");
+    myNextArea =new component(50, 50, "./player.png", 800, 240, "image");
+    myPrevArea =new component(50, 50, "./player.png", 50, 240, "image");
     myBackground = new component(850, 480, `rooms/${room}/bg.png`, 0, 0, "image");
-   
+    
     myHat = new component(30, 30, "", 425, 240, "image");
     myPet = new component(30, 25, `./pets/${pet}.png`, 425, 240, "image");
     vpos.x = myGamePiece.x;
@@ -122,7 +124,10 @@ function updateGameArea() {
 
     myBackground.newPos();
     myBackground.update();
-    
+    myNextArea.newPos();
+    myNextArea.update();
+    myPrevArea.newPos();
+    myPrevArea.update();
     myGamePiece.newPos();
     myGamePiece.update();
     myPet.x = myGamePiece.x - 30;
@@ -140,22 +145,9 @@ function updateGameArea() {
         ctx.fillRect(myMsg.x, myMsg.y - 10, ctx.measureText(myMsg.text).width, 15);
         myMsg.update();
     }
-    
-    if (myGamePiece.x <= 50) {
-        myGamePiece.x = 425
-        if (roomID != 0) {
-            roomID--;
-        } else {
-            roomID = 1;
-        }
-        room = rooms[roomID].replace(/['']/g, "");
-        myBackground.image.src = `./rooms/${room}/bg.png`;
-        myForeground.image.src = `./rooms/${room}/fg.png`;
-    }
-    
-    if (myGamePiece.x >= 750){
-        myGamePiece.x = 425;
-        if (roomID != 1) {
+   if (myGamePiece.x > myNextArea.x && myGamePiece.x < myNextArea.x+myNextArea.width){
+      if (myGamePiece.y > myNextArea.y && myGamePiece.y < myNextArea.y+myNextArea.height){
+	  if (roomID != 1) {
             roomID++;
         } else{
             roomID = 0
@@ -163,7 +155,21 @@ function updateGameArea() {
         room = rooms[roomID].replace(/['']/g, "");
         myBackground.image.src = `./rooms/${room}/bg.png`;
         myForeground.image.src = `./rooms/${room}/fg.png`;
-    }
+      }
+   }
+}
+   if (myGamePiece.x > myPrevArea.x && myGamePiece.x < myPrevArea.x+myPrevArea.width){
+      if (myGamePiece.y > myPrevArea.y && myGamePiece.y < myPrevArea.y+myPrevArea.height){
+	  if (roomID != 0) {
+            roomID--;
+        } else{
+            roomID = 1
+        }
+        room = rooms[roomID].replace(/['']/g, "");
+        myBackground.image.src = `./rooms/${room}/bg.png`;
+        myForeground.image.src = `./rooms/${room}/fg.png`;
+      }
+   }
 }
 
 function getMousePos(canvas, evt) {
