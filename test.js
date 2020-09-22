@@ -21,10 +21,9 @@ function start() {
 
 function startGame() {
     document.getElementById("msg-text").style.visibility = "visible";
-    document.getElementById("pfp-link").style.visibility = "visible";
+
     document.getElementById("hat-test").style.visibility = "visible";
     document.getElementById("msg-send").style.visibility = "visible";
-    document.getElementById("pfp-set").style.visibility = "visible";
     document.getElementById("hat-set").style.visibility = "visible";
     
     myMusic = new sound("./titleconcept.mp3");
