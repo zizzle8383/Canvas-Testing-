@@ -260,9 +260,10 @@ function loadinven(){
 	var InvenItem = document.createElement("img")
 	InvenItem.src = `./hats/${inventory[invenloop-1]}.png`;
 	document.getElementById("inventory").appendChild(InvenItem);
-	invenloop += 1;
+	
 	console.log(invenloop)
 	if (inventory.length !== invenloop){
+	 invenloop += 1;
 	 requestAnimationFrame(loadinven);
 	}
 }
