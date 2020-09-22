@@ -50,6 +50,6 @@ input{
 }
 input[type=submit]{background-color:#880085;}
 input[type=submit]:hover{background-color:purple;}
-input[type=submit]:active{background-color:purple; outline:blue solid 1px;}
+input[type=submit]:active{background-color:purple; outline:darkblue solid 5px;}
 input[type=text]{width:480px;}
 
