@@ -2,11 +2,12 @@ var myGamePiece;
 var myMsg;
 var myMusic;
 var rooms = ["original", "room2"];
+var inventory = ["p1oyo", "bighat"];
 var roomID = 0;
 var room = "original";
 var petbounce = 2;
 var petLoop = true;
-
+var invenloop = 1
 var pet = "pet1";
 var PositionX
 var vpos = {
@@ -14,13 +15,17 @@ var vpos = {
     "y": 0
 };
 
+
+
 function start() {
     document.getElementById("play").style.visibility = "hidden";
+    
+    
     setTimeout(startGame, 500);
 }
 
 function startGame() {
-
+     
     
     myMusic = new sound("./titleconcept.mp3");
     myMusic.play();
@@ -36,6 +41,7 @@ function startGame() {
     vpos.x = myGamePiece.x;
     vpos.y = myGamePiece.y;
     myGameArea.start();
+    requestAnimationFrame(loadinven);
 }
 
 var myGameArea = {
@@ -250,3 +256,14 @@ function updateChar() {
         requestAnimationFrame(updateChar);
     }
 }
+function loadinven(){
+	var InvenItem = document.createElement("img")
+	InvenItem.src = `./hats/${inventory[invenloop-1]}.png`;
+	document.getElementById("inventory").appendChild(InvenItem);
+	invenloop += 1;
+	console.log(invenloop)
+	if (inventory.length !== invenloop){
+	 requestAnimationFrame(loadinven);
+	}
+}
+	 
