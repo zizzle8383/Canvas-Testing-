@@ -48,7 +48,7 @@ input{
   border-radius:5px;
   outline:none;
 }
-input[type=submit]{background-color:#880085; right:55%; position:absolute;}
+input[type=submit]{background-color:#880085;}
 input[type=submit]:hover{background-color:purple;}
 input[type=submit]:active{font-size:10px;}
 
