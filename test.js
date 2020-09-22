@@ -259,6 +259,7 @@ function updateChar() {
 function loadinven(){
 	var InvenItem = document.createElement("img")
 	InvenItem.src = `./hats/${inventory[invenloop-1]}.png`;
+	InvenItem.style = "width:20px; height:20px;"
 	document.getElementById("inventory").appendChild(InvenItem);
 	
 	console.log(invenloop)
