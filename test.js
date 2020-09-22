@@ -41,7 +41,7 @@ function startGame() {
     vpos.x = myGamePiece.x;
     vpos.y = myGamePiece.y;
     myGameArea.start();
-    requestAnimationFrame(loadinven);
+   
 }
 
 var myGameArea = {
