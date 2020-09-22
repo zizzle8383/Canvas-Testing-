@@ -43,3 +43,7 @@ h2 {
   right: 22%;
   position:absolute;
 }
+input{
+  border-style:none;
+  border-radius:5px;
+}
