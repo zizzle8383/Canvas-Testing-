@@ -117,6 +117,7 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
+    ctx = myGameArea.context;
     myGameArea.clear();
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
@@ -124,10 +125,12 @@ function updateGameArea() {
 
     myBackground.newPos();
     myBackground.update();
+    ctx.globalAlpha = 0;
     myNextArea.newPos();
     myNextArea.update();
     myPrevArea.newPos();
     myPrevArea.update();
+    ctx.globalAlpha = 1;
     myGamePiece.newPos();
     myGamePiece.update();
     myPet.x = myGamePiece.x - 30;
