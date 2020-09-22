@@ -25,7 +25,8 @@ function start() {
 }
 
 function startGame() {
-     
+     document.getElementById("msg-text").style.visibility = "visible";
+     document.getElementById("msg-send").style.visibility = "visible";
     
     myMusic = new sound("./titleconcept.mp3");
     myMusic.play();
