@@ -46,6 +46,8 @@ h2 {
 input{
   border-style:none;
   border-radius:5px;
+  outline:none;
 }
 input[type=submit]{background-color:#880085;}
 input[type=submit]:hover{background-color:purple;}
+input[type=submit]:active{font-size:5px}
