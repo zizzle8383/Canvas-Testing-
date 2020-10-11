@@ -1,3 +1,5 @@
+var mystorage =  window.localStorage
+
 var myGamePiece;
 var myMsg;
 var myMusic;
@@ -25,6 +27,7 @@ function start() {
 }
 
 function startGame() {
+     if (mystorage.getItem("room") !== null){room = mystorage.getItem("room"); roomID = rooms.indexOf(room); }
      document.getElementById("msg-text").style.visibility = "visible";
      document.getElementById("msg-send").style.visibility = "visible";
     
@@ -123,7 +126,7 @@ function updateGameArea() {
     myGameArea.clear();
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
-
+    
 
     myBackground.newPos();
     myBackground.update();
@@ -177,7 +180,7 @@ function updateGameArea() {
 	myGamePiece.x = 425
 	
       }
-   
+   mystorage.setItem("room",room)
 }
 
 function getMousePos(canvas, evt) {
