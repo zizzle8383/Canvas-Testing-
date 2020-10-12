@@ -157,7 +157,7 @@ function updateGameArea() {
      if (window.data[room].next !== "none"){
 	 console.log("Loading Next Room!")
         room = window.data[room].next
-	roomID = rooms.findIndex(room)
+	roomID = rooms.indexOf(room)
         myBackground.image.src = `./rooms/${room}/bg.png`;
         myForeground.image.src = `./rooms/${room}/fg.png`;
 	myGamePiece.x = 425
@@ -168,7 +168,7 @@ function updateGameArea() {
      if (window.data[room].previous !== "none"){
 	 console.log("Loading Previous Room!")
         room = window.data[room].previous
-	roomID = rooms.findIndex(room)
+	roomID = rooms.indexOf(room)
         myBackground.image.src = `./rooms/${room}/bg.png`;
         myForeground.image.src = `./rooms/${room}/fg.png`;
 	myGamePiece.x = 425
