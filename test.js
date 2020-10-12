@@ -154,31 +154,25 @@ function updateGameArea() {
         myMsg.update();
     }
    if (myGamePiece.x < myNextArea.x && myGamePiece.x > myNextArea.x-myNextArea.width && myGamePiece.y > myNextArea.y && myGamePiece.y < myNextArea.y+myNextArea.height){
-         console.log("Loading Next Room!")
-	  if (roomID != 1) {
-            roomID++;
-        } else{
-            roomID = 0
-        }
-        room = rooms[roomID].replace(/['']/g, "");
+     if (window.data[room].next !== "none"){
+	 console.log("Loading Next Room!")
+        room = window.data[room].next
+	roomID = rooms.findIndex(room)
         myBackground.image.src = `./rooms/${room}/bg.png`;
         myForeground.image.src = `./rooms/${room}/fg.png`;
 	myGamePiece.x = 425
-      
+        }
    }
 
    if (myGamePiece.x > myPrevArea.x && myGamePiece.x < myPrevArea.x+myPrevArea.width && myGamePiece.y > myPrevArea.y && myGamePiece.y < myPrevArea.y+myPrevArea.height){
-      console.log("Loading Previous Room!")
-	  if (roomID != 0) {
-            roomID--;
-        } else{
-            roomID = 1
-        }
-        room = rooms[roomID].replace(/['']/g, "");
+     if (window.data[room].previous !== "none"){
+	 console.log("Loading Previous Room!")
+        room = window.data[room].previous
+	roomID = rooms.findIndex(room)
         myBackground.image.src = `./rooms/${room}/bg.png`;
         myForeground.image.src = `./rooms/${room}/fg.png`;
 	myGamePiece.x = 425
-	
+        }
       }
    mystorage.setItem("room",room)
 }
