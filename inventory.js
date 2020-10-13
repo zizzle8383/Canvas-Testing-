@@ -12,15 +12,12 @@ inventory = function(){
   }
   
   self.savedata = function(){
-    if (window.localStorage.getItem("Inventory") !== null){
+    if (window.localStorage.getItem("Inventory") === null && self.items.legnth > 0){
     window.localStorage.addItem("Inventory",JSON.stringify(items));
-      return;
-    }else if(window.localStorage.getItem("Inventory").length > 0){ 
-      window.localStorage.setItem("Inventory",JSON.stringify(items));
-      return;
-    }else{
-    return;
+    }else if(window.localStorage.getItem("Inventory") !== null && self.items.legnth > 0){
+    window.localStorage.setItem("Inventory",JSON.stringify(items));
     }
+    return;
   }
   
   self.loaddata = function(){
