@@ -2,30 +2,26 @@ inventory = function(){
   var self = {
    items:[]
   }
- self.additem = function(itemid){
-   if (self.items.includes(itemid) === true){
-     if (Aitems.includes(itemid) === true){
-   self.items.push(itemid)
-   return;
-      }
-    }
-  }
   
   self.savedata = function(){
-    if (window.localStorage.getItem("Inventory") === null && self.items.legnth > 0){
-    window.localStorage.addItem("Inventory",JSON.stringify(items));
-    }else if(window.localStorage.getItem("Inventory") !== null && self.items.legnth > 0){
-    window.localStorage.setItem("Inventory",JSON.stringify(items));
+    if (items.length > 0){
+      if (window.localStorage.getItem("Inventory") === null){
+        window.localStorage.addItem("Inventory",JSON.stringify(items));
+     }else{window.localStorage.setItem("Inventory",JSON.stringify(items));}
     }
-    return;
-  }
+  
+   self.additem =  function(itemid){
+     if (Aitems.includes(itemid) = true){
+         if (items.includes(itemid) = false){
+         items.push(itemid)
+         }
+       }
+   }
   
   self.loaddata = function(){
-    if (window.localStorage.getItem("Inventory") !== null){
-   items = JSON.parse(window.localStorage.getItem("Inventory"));
-      return true;
+    var data = JSON.parse(window.localStorage.getItem("Inventory")
+    if (data.length > 0){
+      items = data
     }
-   return;
+  
   }
-return;
-}
