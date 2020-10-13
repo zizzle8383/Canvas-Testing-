@@ -3,8 +3,8 @@ inventory = function(){
    items:[]
   }
   additem = function(itemid){
-   if (self.items.includes(itemid) = true){
-     if (Aitems.includes(itemid)){
+   if (self.items.includes(itemid) === true){
+     if (Aitems.includes(itemid) === true){
    self.items.push(itemid)
    return;
       }
