@@ -15,11 +15,12 @@ inventory = function(){
     if (window.localStorage.getItem("Inventory") !== null){
     window.localStorage.addItem("Inventory",JSON.stringify(items));
       return;
-    }else{ 
+    }else if(window.localStorage.getItem("Inventory").length > 0){ 
       window.localStorage.setItem("Inventory",JSON.stringify(items));
       return;
-    }
+    }else{
     return;
+    }
   }
   
   self.loaddata = function(){
