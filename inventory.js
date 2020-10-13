@@ -5,11 +5,7 @@
   
   savedata = function(){
     if (self.items.length > 0){
-      if (window.localStorage.getItem("Inventory") === null){
         window.localStorage.addItem("Inventory", JSON.stringify(self.items));
-     }else{
-       window.localStorage.setItem("Inventory", JSON.stringify(self.items));
-     }
     }
     return;
   }
