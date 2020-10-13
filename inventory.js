@@ -1,6 +1,6 @@
 inventory = function(){
   var self = {
-   items:[];
+   items:[]
   }
   additem = function(itemid){
    if (self.items.includes(itemid) !== false){
