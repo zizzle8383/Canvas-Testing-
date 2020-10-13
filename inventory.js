@@ -4,18 +4,18 @@ inventory = function(){
   }
   
   savedata = function(){
-    if (items.length > 0){
+    if (self.items.length > 0){
       if (window.localStorage.getItem("Inventory") === null){
-        window.localStorage.addItem("Inventory",JSON.stringify(items));
-     }else{window.localStorage.setItem("Inventory",JSON.stringify(items));}
+        window.localStorage.addItem("Inventory",JSON.stringify(self.items));
+     }else{window.localStorage.setItem("Inventory",JSON.stringify(self.items));}
     }
     return;
   }
   
    additem =  function(itemid){
      if (Aitems.includes(itemid) = true){
-         if (items.includes(itemid) = false){
-         items.push(itemid)
+         if (self.items.includes(itemid) = false){
+         self.items.push(itemid)
          
          }
        }
@@ -26,7 +26,7 @@ inventory = function(){
     var data
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
     if (data.length > 0){
-      items = data
+      self.items = data
       }
   
     }
