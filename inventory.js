@@ -13,7 +13,7 @@ inventory = function(){
     return;
   }
   loaddata = function(){
-   items = JSON.parse(window.localStorage.getItem("Inventory")
+   items = JSON.parse(window.localStorage.getItem("Inventory"));
    return;
   }
 return;
