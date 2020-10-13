@@ -9,14 +9,17 @@ inventory = function(){
         window.localStorage.addItem("Inventory",JSON.stringify(items));
      }else{window.localStorage.setItem("Inventory",JSON.stringify(items));}
     }
+    return;
   }
   
    self.additem =  function(itemid){
      if (Aitems.includes(itemid) = true){
          if (items.includes(itemid) = false){
          items.push(itemid)
+         
          }
        }
+     return;
    }
   
   self.loaddata = function(){
@@ -27,4 +30,5 @@ inventory = function(){
       }
   
     }
+    return;
   }
