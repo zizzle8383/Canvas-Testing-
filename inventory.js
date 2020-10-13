@@ -21,7 +21,9 @@ inventory = function(){
   }
   
   loaddata = function(){
+    if (window.localStorage.getItem("Inventory") !== null){
    items = JSON.parse(window.localStorage.getItem("Inventory"));
+    }
    return;
   }
 return;
