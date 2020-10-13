@@ -2,7 +2,7 @@ inventory = function(){
   var self = {
    items:[]
   }
-  additem = function(itemid){
+ self.additem = function(itemid){
    if (self.items.includes(itemid) === true){
      if (Aitems.includes(itemid) === true){
    self.items.push(itemid)
@@ -11,7 +11,7 @@ inventory = function(){
     }
   }
   
-  savedata = function(){
+  self.savedata = function(){
     if (window.localStorage.getItem("Inventory") !== null){
     window.localStorage.addItem("Inventory",JSON.stringify(items));
       return;
@@ -22,7 +22,7 @@ inventory = function(){
     return;
   }
   
-  loaddata = function(){
+  self.loaddata = function(){
     if (window.localStorage.getItem("Inventory") !== null){
    items = JSON.parse(window.localStorage.getItem("Inventory"));
       return true;
