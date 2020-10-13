@@ -17,4 +17,5 @@ inventory = function(){
          return;
      }
   return self;
+ }
 }
