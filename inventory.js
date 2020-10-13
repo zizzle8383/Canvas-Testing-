@@ -3,9 +3,11 @@ inventory = function(){
    items:[]
   }
   additem = function(itemid){
-   if (self.items.includes(itemid) = true && Aitems.includes(itemid) = true){
+   if (self.items.includes(itemid) = true){
+     if (Aitems.includes(itemid){
    self.items.push(itemid)
    return;
+      }
     }
   }
   savedata = function(){
