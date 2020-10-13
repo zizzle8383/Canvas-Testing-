@@ -4,9 +4,8 @@
   }
   
   savedata = function(){
-    if (self.items.length > 0){
         window.localStorage.setItem("Inventory", JSON.stringify(self.items));
-    }
+ 
     return;
   }
   
