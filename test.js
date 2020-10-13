@@ -201,7 +201,9 @@ function setPFP() {
 }
 
 function updateHat() {
+    if (self.items.includes(document.getElementById("hat-test").value){
     myHat.image.src = `./hats/${document.getElementById("hat-test").value}.png`;
+   }else{console.log("Item Not Available.")}
 }
 
 function updatePet() {
