@@ -4,7 +4,7 @@ var myGamePiece;
 var myMsg;
 var myMusic;
 var rooms = ["original", "room2"];
-var inventory = ["p1oyo", "bighat"];
+
 var roomID = 0;
 var room = "original";
 var petbounce = 2;
@@ -254,16 +254,6 @@ function updateChar() {
         requestAnimationFrame(updateChar);
     }
 }
-function loadinven(){
-	var InvenItem = document.createElement("img")
-	InvenItem.src = `./hats/${inventory[invenloop-1]}.png`;
-	InvenItem.style = "width:20px; height:20px;"
-	document.getElementById("inventory").appendChild(InvenItem);
-	
-	console.log(invenloop)
-	if (inventory.length !== invenloop){
-	 invenloop += 1;
-	 requestAnimationFrame(loadinven);
-	}
-}
+
+
 	 
