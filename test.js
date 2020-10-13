@@ -44,6 +44,7 @@ function startGame() {
     myPet = new component(30, 25, `./pets/${pet}.png`, 425, 240, "image");
     vpos.x = myGamePiece.x;
     vpos.y = myGamePiece.y;
+    playerinventory(loaddata())
     myGameArea.start();
    
 }
@@ -127,7 +128,7 @@ function updateGameArea() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
     
-
+    playerinventory(savedata())
     myBackground.newPos();
     myBackground.update();
     ctx.globalAlpha = 0;
@@ -145,7 +146,7 @@ function updateGameArea() {
     myHat.update();
     myForeground.newPos();
     myForeground.update();
-
+     
     if (myMsg.text != undefined && myMsg.text != "") {
         myMsg.x = myGamePiece.x - myMsg.text.length * 3 + 24;
         myMsg.y = myGamePiece.y - 10;
