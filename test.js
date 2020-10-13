@@ -21,7 +21,7 @@ var vpos = {
 
 function start() {
     document.getElementById("play").style.visibility = "hidden";
-    
+    playerinventory(loaddata())
     
     setTimeout(startGame, 500);
 }
@@ -44,7 +44,7 @@ function startGame() {
     myPet = new component(30, 25, `./pets/${pet}.png`, 425, 240, "image");
     vpos.x = myGamePiece.x;
     vpos.y = myGamePiece.y;
-    playerinventory(loaddata())
+    
     myGameArea.start();
    
 }
