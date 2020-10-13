@@ -4,7 +4,7 @@ var myGamePiece;
 var myMsg;
 var myMusic;
 var rooms = ["original", "room2"];
-var playerinventory = inventory();
+var playerinventory = inventory;
 var roomID = 0;
 var room = "original";
 var petbounce = 2;
