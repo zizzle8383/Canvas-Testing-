@@ -1,1 +1,1 @@
-var Aitems = ["p1oyo","bighat"]
+Aitems = ["p1oyo","bighat"]
