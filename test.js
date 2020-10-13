@@ -21,7 +21,7 @@ var vpos = {
 
 function start() {
     document.getElementById("play").style.visibility = "hidden";
-    
+    loaddata()
     
     setTimeout(startGame, 500);
 }
