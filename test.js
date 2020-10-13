@@ -4,7 +4,7 @@ var myGamePiece;
 var myMsg;
 var myMusic;
 var rooms = ["original", "room2"];
-var playerinventory = inventory();
+
 var roomID = 0;
 var room = "original";
 var petbounce = 2;
@@ -128,7 +128,7 @@ function updateGameArea() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
     
-    playerinventory(savedata())
+    savedata()
     myBackground.newPos();
     myBackground.update();
     ctx.globalAlpha = 0;
