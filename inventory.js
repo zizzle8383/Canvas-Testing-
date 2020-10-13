@@ -4,7 +4,7 @@ inventory = function(){
   }
   additem = function(itemid){
    if (self.items.includes(itemid) = true){
-     if (Aitems.includes(itemid){
+     if (Aitems.includes(itemid)){
    self.items.push(itemid)
    return;
       }
