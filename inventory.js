@@ -14,9 +14,10 @@ inventory = function(){
   savedata = function(){
     if (window.localStorage.getItem("Inventory") !== null){
     window.localStorage.addItem("Inventory",JSON.stringify(items));
+      return;
     }else{ 
       window.localStorage.setItem("Inventory",JSON.stringify(items));
-      
+      return;
     }
     return;
   }
