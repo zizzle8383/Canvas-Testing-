@@ -9,6 +9,7 @@ inventory = function(){
         window.localStorage.addItem("Inventory",JSON.stringify(items));
      }else{window.localStorage.setItem("Inventory",JSON.stringify(items));}
     }
+  }
   
    self.additem =  function(itemid){
      if (Aitems.includes(itemid) = true){
