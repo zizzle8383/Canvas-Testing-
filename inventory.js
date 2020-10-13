@@ -10,8 +10,8 @@
   }
   
    additem =  function(itemid){
-     if (Aitems.includes(itemid) = true){
-         if (self.items.includes(itemid) = false){
+     if (Aitems.includes(itemid) === true){
+         if (self.items.includes(itemid) === false){
          self.items.push(itemid)
          
          }
