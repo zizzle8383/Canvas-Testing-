@@ -5,6 +5,7 @@ inventory = function(){
   additem = function(itemid){
    if (self.items.includes(itemid) !== false){
    self.items.push(itemid)
+   return;
     }
   }
 return;
