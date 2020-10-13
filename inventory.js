@@ -1,4 +1,4 @@
-inventory = function(){
+
   var self = {
    items:[]
   }
@@ -28,7 +28,7 @@ inventory = function(){
     if (data.length > 0){
       self.items = data
       }
-  
+     return;
     }
-    return;
-  }
+    
+  
