@@ -1,14 +1,14 @@
 inventory = function(){
- var inv = {
+ var self = {
          items:[]   
      }
-     inv.additem = function(itemid){
-       inv.items.push(itemid)
+     self.additem = function(itemid){
+       self.items.push(itemid)
      }
-     inv.hasitem = function(itemid){
-      if (inv.items.includes(itemid) = true){
+     self.hasitem = function(itemid){
+      if (self.items.includes(itemid) = true){
             console.log("removing"+itemid+"")
-            inv.items.splice(inv.items.indexOf(itemid))
+            self.items.splice(inv.items.indexOf(itemid))
             console.log("Completed.")
         }
      }
