@@ -7,4 +7,5 @@ inventory = function(){
    self.items.push(itemid)
     }
   }
+return;
 }
