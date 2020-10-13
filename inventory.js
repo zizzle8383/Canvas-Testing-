@@ -22,6 +22,7 @@ inventory = function(){
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
     if (data.length > 0){
       items = data
-    }
+      }
   
+    }
   }
