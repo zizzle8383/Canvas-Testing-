@@ -3,7 +3,7 @@ inventory = function(){
    items:[]
   }
   
-  self.savedata = function(){
+  savedata = function(){
     if (items.length > 0){
       if (window.localStorage.getItem("Inventory") === null){
         window.localStorage.addItem("Inventory",JSON.stringify(items));
@@ -12,7 +12,7 @@ inventory = function(){
     return;
   }
   
-   self.additem =  function(itemid){
+   additem =  function(itemid){
      if (Aitems.includes(itemid) = true){
          if (items.includes(itemid) = false){
          items.push(itemid)
@@ -22,7 +22,7 @@ inventory = function(){
      return;
    }
   
-  self.loaddata = function(){
+  loaddata = function(){
     var data
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
     if (data.length > 0){
