@@ -4,7 +4,9 @@ var myGamePiece;
 var myMsg;
 var myMusic;
 var rooms = ["original", "room2"];
-
+var selectbox
+var option
+var linkurl
 var roomID = 0;
 var room = "original";
 var petbounce = 2;
@@ -23,9 +25,9 @@ function start() {
     document.getElementById("play").style.visibility = "hidden";
     loaddata()
     for (invenloop in self.items){ 
-    var selectbox = document.getElementById("hat-test")
-    var option = document.createElement("option");
-    var linkurl = self.items[invenloop].replace(/['"]+/g, '')
+     selectbox = document.getElementById("hat-test")
+     option = document.createElement("option");
+     linkurl = self.items[invenloop].replace(/['"]+/g, '')
     option.text = self.items[invenloop];
     option.style.backgroundImage = "url(hats/"+linkurl+".png)"
 	    console.log(invenloop);
