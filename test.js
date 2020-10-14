@@ -4,7 +4,7 @@ var myGamePiece;
 var myMsg;
 var myMusic;
 var rooms = ["original", "room2"];
-var opt = document.getElementById("hat-test")
+var selectbox = document.getElementById("hat-test")
 var roomID = 0;
 var room = "original";
 var petbounce = 2;
@@ -25,7 +25,7 @@ function start() {
     for (invenloop in self.items){ 
     var option = document.createElement("option");
     option.text = self.items[invenloop];
-    opt.add(option);
+    selectbox.add(option);
     }
     setTimeout(startGame, 500);
 }
