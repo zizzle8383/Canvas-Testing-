@@ -26,7 +26,7 @@ function start() {
     var selectbox = document.getElementById("hat-test")
     var option = document.createElement("option");
     option.text = self.items[invenloop];
-    option.style = "background-image:url("hats/"+self.items[invenloop]+".png.");"
+    option.style.backgroundImage = "url(hats/"+self.items[invenloop]+".png)"
 	    console.log(invenloop);
     selectbox.add(option);
 	    
