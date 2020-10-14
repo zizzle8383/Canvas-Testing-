@@ -23,9 +23,11 @@ function start() {
     document.getElementById("play").style.visibility = "hidden";
     loaddata()
     for (invenloop in self.items){ 
-    var option = document.createElement("option");
+    option = document.createElement("option");
     option.text = self.items[invenloop];
+	    console.log("loop comp");
     selectbox.add(option);
+	    
     }
     setTimeout(startGame, 500);
 }
