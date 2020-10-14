@@ -25,8 +25,9 @@ function start() {
     for (invenloop in self.items){ 
     var selectbox = document.getElementById("hat-test")
     var option = document.createElement("option");
+    var linkurl = self.items[invenloop].replace(/['"]+/g, '')
     option.text = self.items[invenloop];
-    option.style.backgroundImage = "url(hats/"+self.items[invenloop]+".png)"
+    option.style.backgroundImage = "url(hats/"+linkurl+".png)"
 	    console.log(invenloop);
     selectbox.add(option);
 	    
