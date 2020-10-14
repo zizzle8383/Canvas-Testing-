@@ -1,10 +1,10 @@
 var mystorage =  window.localStorage
-var option;
+
 var myGamePiece;
 var myMsg;
 var myMusic;
 var rooms = ["original", "room2"];
-var selectbox = document.getElementById("hat-test")
+
 var roomID = 0;
 var room = "original";
 var petbounce = 2;
@@ -23,9 +23,10 @@ function start() {
     document.getElementById("play").style.visibility = "hidden";
     loaddata()
     for (invenloop in self.items){ 
-    option = document.createElement("option");
+    var selectbox = document.getElementById("hat-test")
+    var option = document.createElement("option");
     option.text = self.items[invenloop];
-	    console.log("loop comp");
+	    console.log(invenloop);
     selectbox.add(option);
 	    
     }
