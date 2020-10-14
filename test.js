@@ -6,7 +6,7 @@ var myMusic;
 var rooms = ["original", "room2"];
 var selectbox
 var option
-var linkurl
+
 var roomID = 0;
 var room = "original";
 var petbounce = 2;
@@ -27,9 +27,9 @@ function start() {
     for (invenloop in self.items){ 
      selectbox = document.getElementById("hat-test")
      option = document.createElement("option");
-     linkurl = self.items[invenloop];
+     
     option.text = self.items[invenloop];
-    option.style.backgroundImage = "url(hats/"+linkurl.replace(/['"]+/g, '')+".png)"
+
 	    console.log(invenloop);
     selectbox.add(option);
 	    
