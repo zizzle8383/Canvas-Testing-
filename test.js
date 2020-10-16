@@ -68,7 +68,7 @@ var myGameArea = {
         this.canvas.height = 480;
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
-        UpdateGameArea()
+        updateGameArea()
         walking = false;
         document.getElementById("canvas-container").insertBefore(this.canvas, null);
         window.addEventListener("keydown", function (e) {
