@@ -274,30 +274,30 @@ function updateChar() {
 function updatecharsprites(){
        if (vpos.y > myGamePiece.y +20){
 	if (vpos.x > myGamePiece.x + 20){
-		myGamePiece.image.src = "./player/blockoright" 
+		myGamePiece.image.src = "./player/blockoright.png" 
 	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.image.src = "./player/blockoleft" 
+		myGamePiece.image.src = "./player/blockoleft.png" 
 		
 	}else{
-		myGamePiece.image.src = "./player/blockoback" 
+		myGamePiece.image.src = "./player/blockoback.png" 
 	
 	}
 	
        }else if(vpos.y < myGamePiece.y -20){
 	       	if (vpos.x > myGamePiece.x + 20){
-		myGamePiece.image.src = "./player/blockoright" 
+		myGamePiece.image.src = "./player/blockoright.png" 
 	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.image.src = "./player/blockoleft" 
+		myGamePiece.image.src = "./player/blockoleft.png" 
 		
 	}else{
-		myGamePiece.image.src = "./player/blockofront" 
+		myGamePiece.image.src = "./player/blockofront.png" 
 	
 	}
        }else{
 	if (vpos.x > myGamePiece.x + 20){
-		myGamePiece.image.src = "./player/blockoright" 
+		myGamePiece.image.src = "./player/blockoright.png" 
 	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.image.src = "./player/blockoleft" 
+		myGamePiece.image.src = "./player/blockoleft.png" 
 		
 	}
        }
