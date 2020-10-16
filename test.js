@@ -47,7 +47,7 @@ function startGame() {
     myMusic.play();
     myForeground = new component(850, 50, `./rooms/${room}/fg.png`, 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
-    myGamePiece = new component(50, 50, "./player/blockofront.png", 425, 240, "image");
+    myGamePiece = new component(50, 50, "./player/blockyfront.png", 425, 240, "image");
     myNextArea =new component(50, 480, "./bordertest.png", 800, 0, "image");
     myPrevArea =new component(50, 480, "./bordertest.png", 0, 0, "image");
     myBackground = new component(850, 480, `rooms/${room}/bg.png`, 0, 0, "image");
@@ -278,7 +278,7 @@ function updateChar() {
 
     if (dist <=5 || currentroom !== room) {
         walking = false;
-	myGamePiece.image.src = "player/blockofront.png"
+	
 	
     } else {
         requestAnimationFrame(updateChar);
@@ -288,14 +288,16 @@ function updateChar() {
 
 function updatecharsprites(){
      if (vpos.x > myGamePiece.x + 100){
-	     myGamePiece.image.src = "player/blockoright.png"
+	     myGamePiece.image.src = "player/blockyright.png"
 	     
      }else if(vpos.x < myGamePiece.x-50){
-	     myGamePiece.image.src = "player/blockoleft.png"
+	     myGamePiece.image.src = "player/blockyleft.png"
 	     
      }else if(vpos.y < myGamePiece.y){
-	     myGamePiece.image.src = "player/blockoback.png"
+	     myGamePiece.image.src = "player/blockyback.png"
 	     
+     }else if(vpos.y < myGamePiece.y){
+	     myGamePiece.image.src = "player/blockyfront.png"
      }
 	       
 
