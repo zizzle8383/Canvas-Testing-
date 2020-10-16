@@ -79,7 +79,9 @@ var myGameArea = {
             myGameArea.keys[e.keyCode] = false;
         });
         this.canvas.addEventListener("mousedown", function (e) {
+	    
             currentroom = room;
+	    
             vpos = getMousePos(myGameArea.canvas, e);
             vpos.x -= 25;
             vpos.y -= 45;
@@ -87,9 +89,11 @@ var myGameArea = {
             if (!walking){
                 if (vpos.y > 0 && vpos.y < 480) {
                     if (vpos.x > 0 && vpos.x < 850){
+			sw = 1
                         walking = true;
-			
+			sw = 0
                         requestAnimationFrame(updateChar);
+			   
 			updatecharsprites()
                     }
                 }
@@ -258,6 +262,7 @@ function getDist(pos1, pos2) {
 }
 
 function updateChar() {
+   if (sw !== 1){
     var nx = vpos.x - myGamePiece.x;
     var ny = vpos.y - myGamePiece.y;
     var dist = Math.sqrt(nx * nx + ny * ny);
@@ -272,6 +277,7 @@ function updateChar() {
     } else {
         requestAnimationFrame(updateChar);
     }
+   }
 }
 
 function updatecharsprites(){
