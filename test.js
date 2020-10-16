@@ -274,30 +274,30 @@ function updateChar() {
 function updatecharsprites(){
        if (vpos.y > myGamePiece.y +20){
 	if (vpos.x > myGamePiece.x + 20){
-		myGamePiece.img.src = "./player/blockoright" 
+		myGamePiece.image.src = "./player/blockoright" 
 	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.img.src = "./player/blockoleft" 
+		myGamePiece.image.src = "./player/blockoleft" 
 		
 	}else{
-		myGamePiece.img.src = "./player/blockoback" 
+		myGamePiece.image.src = "./player/blockoback" 
 	
 	}
 	
        }else if(vpos.y < myGamePiece.y -20){
 	       	if (vpos.x > myGamePiece.x + 20){
-		myGamePiece.img.src = "./player/blockoright" 
+		myGamePiece.image.src = "./player/blockoright" 
 	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.img.src = "./player/blockoleft" 
+		myGamePiece.image.src = "./player/blockoleft" 
 		
 	}else{
-		myGamePiece.img.src = "./player/blockofront" 
+		myGamePiece.image.src = "./player/blockofront" 
 	
 	}
        }else{
 	if (vpos.x > myGamePiece.x + 20){
-		myGamePiece.img.src = "./player/blockoright" 
+		myGamePiece.image.src = "./player/blockoright" 
 	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.img.src = "./player/blockoleft" 
+		myGamePiece.image.src = "./player/blockoleft" 
 		
 	}
        }
