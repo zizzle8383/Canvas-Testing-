@@ -1,5 +1,6 @@
 var mystorage =  window.localStorage
-
+var walking 
+walking = false
 var myGamePiece;
 var myMsg;
 var myMusic;
@@ -79,7 +80,7 @@ var myGameArea = {
             myGameArea.keys[e.keyCode] = false;
         });
         this.canvas.addEventListener("mousedown", function (e) {
-	   if (walking = false){
+	   
             currentroom = room;
 	    
             vpos = getMousePos(myGameArea.canvas, e);
@@ -87,7 +88,7 @@ var myGameArea = {
             vpos.x -= 25;
             vpos.y -= 45;
 	    if (vpos.x < 0){vpos.x=1}
-            if (!walking){
+            if (walking =  false){
                 if (vpos.y > 0 && vpos.y < 480) {
                     if (vpos.x > 0 && vpos.x < 850){
 			
@@ -100,7 +101,7 @@ var myGameArea = {
                     }
                 }
 	    }
-	   }
+	   
         });
 
     },
