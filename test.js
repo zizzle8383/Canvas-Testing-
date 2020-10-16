@@ -273,7 +273,7 @@ function updateChar() {
 }
 
 function updatecharsprites(){
-       if (vpos.y > myGamePiece.y +20){
+       if (vpos.y > myGamePiece.y + 20){
 	if (vpos.x < myGamePiece.x - 20){
 		myGamePiece.image.src = "./player/blockoright.png" 
 	}else if(vpos.x < myGamePiece.x - 20){
@@ -284,7 +284,7 @@ function updatecharsprites(){
 	
 	}
 	
-       }else if(vpos.y > myGamePiece.y +20){
+       }else if(vpos.y < myGamePiece.y -20){
 	       	if (vpos.x > myGamePiece.x + 20){
 		myGamePiece.image.src = "./player/blockoright.png" 
 	}else if(vpos.x < myGamePiece.x - 20){
