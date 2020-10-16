@@ -90,7 +90,7 @@ var myGameArea = {
                         walking = true;
 			
                         requestAnimationFrame(updateChar);
-			
+			updatecharsprites()
                     }
                 }
 	    }
