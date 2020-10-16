@@ -279,6 +279,9 @@ function updateChar() {
     } else {
         requestAnimationFrame(updateChar);
     }
+   }else{
+	   nx = 0
+	   ny = 0
    }
 }
 
