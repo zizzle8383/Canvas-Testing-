@@ -68,7 +68,7 @@ var myGameArea = {
         this.canvas.height = 480;
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 20);
+        UpdateGameArea()
         walking = false;
         document.getElementById("canvas-container").insertBefore(this.canvas, null);
         window.addEventListener("keydown", function (e) {
@@ -99,7 +99,7 @@ var myGameArea = {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
     "stop": function() {
-        clearInterval(this.interval);
+        console.log("stop")
     }
 };
 
@@ -188,6 +188,7 @@ function updateGameArea() {
         }
       }
    mystorage.setItem("room",room)
+   requestAnimationFrame(updateGameArea);
 }
 
 function getMousePos(canvas, evt) {
