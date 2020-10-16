@@ -296,7 +296,7 @@ function updatecharsprites(){
      }else if(vpos.y < myGamePiece.y){
 	     myGamePiece.image.src = "player/blockyback.png"
 	     
-     }else if(vpos.y < myGamePiece.y){
+     }else if(vpos.y > myGamePiece.y){
 	     myGamePiece.image.src = "player/blockyfront.png"
      }
 	       
