@@ -280,8 +280,7 @@ function updateChar() {
         requestAnimationFrame(updateChar);
     }
    }else{
-	   nx = 0
-	   ny = 0
+	  return;
    }
 }
 
