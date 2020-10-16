@@ -1,6 +1,5 @@
 var mystorage =  window.localStorage
-var walking 
-walking = false
+
 var myGamePiece;
 var myMsg;
 var myMusic;
@@ -87,8 +86,9 @@ var myGameArea = {
 	   
             vpos.x -= 25;
             vpos.y -= 45;
+	    updatecharsprites()
 	    if (vpos.x < 0){vpos.x=1}
-            if (walking =  false){
+            if (!walking){
                 if (vpos.y > 0 && vpos.y < 480) {
                     if (vpos.x > 0 && vpos.x < 850){
 			
@@ -96,7 +96,7 @@ var myGameArea = {
 			
                         requestAnimationFrame(updateChar);
 			   
-			updatecharsprites()
+			
 		    
                     }
                 }
