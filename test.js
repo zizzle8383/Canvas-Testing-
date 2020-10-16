@@ -279,7 +279,7 @@ function updateChar() {
     if (dist <=5 || currentroom !== room) {
         walking = false;
 	myGamePiece.image.src = "player/blockofront.png"
-	myGamePiece.width = 86
+	
     } else {
         requestAnimationFrame(updateChar);
     }
@@ -289,13 +289,13 @@ function updateChar() {
 function updatecharsprites(){
      if (vpos.x > myGamePiece.x + 100){
 	     myGamePiece.image.src = "player/blockoright.png"
-	     myGamePiece.width = 50
+	     
      }else if(vpos.x < myGamePiece.x-50){
 	     myGamePiece.image.src = "player/blockoleft.png"
-	     myGamePiece.width = 50
+	     
      }else if(vpos.y < myGamePiece.y){
 	     myGamePiece.image.src = "player/blockoback.png"
-	     myGamePiece.width = 86
+	     
      }
 	       
 
