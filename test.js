@@ -286,11 +286,11 @@ function updateChar() {
 }
 
 function updatecharsprites(){
-     if (vpos.x > myGamePiece.x + 50){
+     if (vpos.x > myGamePiece.x + 100){
 	     myGamePiece.image.src = "player/blockoright.png"
-     }else if(vpos.x < myGamePiece.x){
+     }else if(vpos.x < myGamePiece.x-50){
 	     myGamePiece.image.src = "player/blockoleft.png"
-     }else if(vpos.y < myGamePiece.y-5){
+     }else if(vpos.y < myGamePiece.y){
 	     myGamePiece.image.src = "player/blockoback.png"
      }
 	       
