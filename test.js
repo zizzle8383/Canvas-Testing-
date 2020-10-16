@@ -88,8 +88,9 @@ var myGameArea = {
                 if (vpos.y > 0 && vpos.y < 480) {
                     if (vpos.x > 0 && vpos.x < 850){
                         walking = true;
-			updatecharsprites()
+			
                         requestAnimationFrame(updateChar);
+			
                     }
                 }
 	    }
@@ -266,7 +267,7 @@ function updateChar() {
         myGamePiece.y += ((ny / dist) * 5);
     }
 
-    if (myGamePiece.x == vpos.x && myGamePiece.y == vpos.y || currentroom !== room) {
+    if (dist <=5 || currentroom !== room) {
         walking = false;
     } else {
         requestAnimationFrame(updateChar);
@@ -281,7 +282,7 @@ function updatecharsprites(){
 		myGamePiece.image.src = "./player/blockoleft.png" 
 		
 	}else{
-		myGamePiece.image.src = "./player/blockofront.png" 
+		myGamePiece.image.src = "./player/blockoback.png" 
 	
 	}
 	
@@ -292,7 +293,7 @@ function updatecharsprites(){
 		myGamePiece.image.src = "./player/blockoleft.png" 
 		
 	}else{
-		myGamePiece.image.src = "./player/blockoback.png" 
+		myGamePiece.image.src = "./player/blockofront.png" 
 	
 	}
        }else{
