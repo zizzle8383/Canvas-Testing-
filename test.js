@@ -280,7 +280,7 @@ function updatecharsprites(){
 		myGamePiece.image.src = "./player/blockoleft.png" 
 		
 	}else{
-		myGamePiece.image.src = "./player/blockoback.png" 
+		myGamePiece.image.src = "./player/blockofront.png" 
 	
 	}
 	
@@ -291,7 +291,7 @@ function updatecharsprites(){
 		myGamePiece.image.src = "./player/blockoleft.png" 
 		
 	}else{
-		myGamePiece.image.src = "./player/blockofront.png" 
+		myGamePiece.image.src = "./player/blockoback.png" 
 	
 	}
        }else{
