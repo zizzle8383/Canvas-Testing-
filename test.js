@@ -274,6 +274,7 @@ function updateChar() {
 
     if (dist <=5 || currentroom !== room) {
         walking = false;
+	myGamePiece.image.src = "player/blockofront.png"
     } else {
         requestAnimationFrame(updateChar);
     }
@@ -281,35 +282,11 @@ function updateChar() {
 }
 
 function updatecharsprites(){
-       if (vpos.y < myGamePiece.y - 20){
-	if (vpos.x < myGamePiece.x - 20){
-		myGamePiece.image.src = "./player/blockoright.png" 
-	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.image.src = "./player/blockoleft.png" 
-		
-	}else{
-		myGamePiece.image.src = "./player/blockoback.png" 
-	
-	}
-	
-       }else if(vpos.y > myGamePiece.y + 20){
-	       	if (vpos.x > myGamePiece.x + 20){
-		myGamePiece.image.src = "./player/blockoright.png" 
-	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.image.src = "./player/blockoleft.png" 
-		
-	}else{
-		myGamePiece.image.src = "./player/blockofront.png" 
-	
-	}
-       }else{
-	if (vpos.x > myGamePiece.x + 20){
-		myGamePiece.image.src = "./player/blockoright.png" 
-	}else if(vpos.x < myGamePiece.x - 20){
-		myGamePiece.image.src = "./player/blockoleft.png" 
-		
-	}
-       }
+     if (vpos.x > myGamePiece.x){
+	     myGamePiece.image.src = "player/blockoright.png"
+     }else if(vpos.x < myGamePiece.x){
+	     myGamePiece.image.src = "player/blockoleft.png"
+     }
 	       
 
 }
