@@ -88,6 +88,7 @@ var myGameArea = {
                 if (vpos.y > 0 && vpos.y < 480) {
                     if (vpos.x > 0 && vpos.x < 850){
                         walking = true;
+			updatecharsprites()
                         requestAnimationFrame(updateChar);
                     }
                 }
@@ -259,7 +260,7 @@ function updateChar() {
     var nx = vpos.x - myGamePiece.x;
     var ny = vpos.y - myGamePiece.y;
     var dist = Math.sqrt(nx * nx + ny * ny);
-    updatecharsprites()
+    
     if (dist >= 5) {
         myGamePiece.x += ((nx / dist) * 5);
         myGamePiece.y += ((ny / dist) * 5);
