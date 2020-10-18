@@ -164,7 +164,7 @@ function updateGameArea() {
     myPet.x = myGamePiece.x - 30;
     updatePet();
     myHat.x = myGamePiece.x + 10;
-    myHat.y = myGamePiece.y - 20;
+    myHat.y = myGamePiece.y - 25;
     myHat.update();
     myForeground.newPos();
     myForeground.update();
