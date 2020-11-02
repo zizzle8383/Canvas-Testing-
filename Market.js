@@ -1,6 +1,7 @@
 
 
 function buy(cost,itemid){
+  console.log(""+cost+","+itemid+"")
   if (localstorage.getItem("cash") !== null){
     if (localstorage.getItem("cash") >= cost){
       localstorage.setItem("buyitem",itemid)
