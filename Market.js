@@ -2,19 +2,19 @@
 
 function buy(cost,itemid){
   console.log(""+cost+","+itemid+"")
-  if (localstorage.getItem("cash") !== null){
-    if (localstorage.getItem("cash") >= cost){
-      localstorage.setItem("buyitem",itemid)
-      cash = localstorage.getItem("cash")
+  if (localStorage.getItem("cash") !== null){
+    if (localStorage.getItem("cash") >= cost){
+      localStorage.setItem("buyitem",itemid)
+      cash = localStorage.getItem("cash")
       cash -= cost;
-      localstorage.setItem("cash",cash)
+      localStorage.setItem("cash",cash)
       console.log("Bought"+itemid+"!")
       
     }else{
       console.log("Not Enough Cash!")
     }
   }else{
-    localstorage.setItem("cash",0);
+    localStorage.setItem("cash",0);
     console.log("Added Cash to LocalStorage.")
   }
 }
