@@ -16,5 +16,5 @@ function buy(cost,itemid){
     localstorage.setItem("cash",0);
     console.log("Added Cash to LocalStorage.")
   }
-  
+}
   
