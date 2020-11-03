@@ -22,5 +22,6 @@ function buy(cost,itemid){
   }
  }else{
    console.log("Player already owns item!")
+ }
 }
   
