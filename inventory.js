@@ -27,8 +27,8 @@
       self.items = data
      }
     }else{ 
-      window.localStorage.setitem("room","original")
-      window.localStorage.setitem("Inventory",JSON.parse(self.items))
+      window.localStorage.setItem("room","original")
+      window.localStorage.setItem("Inventory","[]")
     }
      return;
     }
