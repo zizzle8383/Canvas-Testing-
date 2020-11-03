@@ -11,6 +11,6 @@ body{
  border-style:solid;
  border-color:grey;
  width:50%;
- margin-right:auto;
- margin-left:auto;
+ 
+ right:100px;
 }
