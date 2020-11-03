@@ -3,7 +3,7 @@ body{
  }
  h1{
  text-align:center;
-
+ background-color:lightblue;
  }
 .BuyBox{
  position:absolute;
@@ -16,6 +16,7 @@ body{
  right:25%;
 }
 #coins{
+ background-color:lightblue;
  position:absolute;
  right:0px;
  top:0px;
