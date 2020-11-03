@@ -25,15 +25,15 @@
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
      if (data.length > 0){
       self.items = data
-       if (window.localStorage.getItem("buyitem") !== null){
+       if (window.localStorage.getItem("buyitem").length > 0){
          console.log("push to items")
          self.items.push(window.localStorage.getItem("buyitem"))
-         window.localStorage.setItem("buyitem",null)
+         window.localStorage.setItem("buyitem","")
        }
      }
     }else{ 
       window.localStorage.setItem("room","original")
-      window.localStorage.setItem("Inventory","[]")
+      window.localStorage.setItem("Inventory",JSON.stringify(self.items))
     
     }
      return;
