@@ -1,7 +1,4 @@
-#titlecont{
- background-color:lightblue;
- vertical-align:top;
-}
+
 
 body{
  background-color:purple;
@@ -39,4 +36,8 @@ display: inline-block;
  width:25px;
  height:25px;
  vertical-align:-5px;
+}
+#titlecont{
+ background-color:lightblue;
+ vertical-align:top;
 }
