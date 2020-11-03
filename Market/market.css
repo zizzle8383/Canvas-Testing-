@@ -2,6 +2,7 @@ body{
  background-color:purple;
  }
  h1{
+ vertical-align:top;
  text-align:center;
  background-color:lightblue;
  }
