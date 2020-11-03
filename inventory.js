@@ -22,12 +22,9 @@
   loaddata = function(){
     var data
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
-    if (window.localStorage.getItem("buyitem") !== null && data.includes(window.localStorage.getItem("buyitem")) == false){
-      data.push(window.localStorage.getItem("buyitem"))
-    }
     if (data.length > 0){
       self.items = data
-      window.localStorage.setItem("buyitem",null)
+      
       }
      return;
     }
