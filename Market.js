@@ -1,7 +1,7 @@
 
 
 function buy(cost,itemid){
-  currentinven = JSON.parse(localStorage.getItem("Inventory")
+  currentinven = JSON.parse(localStorage.getItem("Inventory"))
                             
   console.log(""+cost+","+itemid+"")
  if (currentinven.includes(itemid) == false){
