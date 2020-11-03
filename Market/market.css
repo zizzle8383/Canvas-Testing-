@@ -20,7 +20,7 @@ body{
  right:0px;
  top:0px;
  width:100px;
- border-style:solid;
+display: inline-block;
  
 
 }
