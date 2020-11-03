@@ -21,4 +21,10 @@ body{
  top:0px;
  width:100px;
  border-style:solid;
+ 
+
+}
+
+#cointext{
+ display: inline-block;
 }
