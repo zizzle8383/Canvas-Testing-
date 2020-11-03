@@ -25,6 +25,8 @@
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
      if (data.length > 0){
       self.items = data
+       if (window.localStorage.getItem("buyitem") !== null){
+         self.items.push(window.localStorage.getItem("buyitem"))
      }
     }else{ 
       window.localStorage.setItem("room","original")
