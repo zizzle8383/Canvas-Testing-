@@ -5,6 +5,7 @@ body{
  text-align:center;
  }
 .BuyBox{
+ position:absolute;
  background-color:white;
  text-align:center;
  border-style:solid;
