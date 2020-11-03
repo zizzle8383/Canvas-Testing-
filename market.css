@@ -4,3 +4,9 @@ body{
  h1{
  text-align:center;
  }
+.BuyBox{
+ background-color:white;
+ text-align:center;
+ border-style:solid;
+ border-color:grey;
+}
