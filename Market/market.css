@@ -39,5 +39,8 @@ display: inline-block;
 }
 #titlecont{
  background-color:lightblue;
- vertical-align:top;
+ top:0px;
+ position:fixed;
+ width:100%;
+ 
 }
