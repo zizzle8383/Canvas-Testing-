@@ -26,6 +26,7 @@
      if (data.length > 0){
       self.items = data
        if (window.localStorage.getItem("buyitem") !== null){
+         console.log("push to items")
          self.items.push(window.localStorage.getItem("buyitem"))
          window.localStorage.setItem("buyitem",null)
        }
