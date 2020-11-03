@@ -20,7 +20,7 @@
    }
   
   loaddata = function(){
-    if (window.localStorage !== null){
+    if (window.localStorage.getItem("Inventory") !== null){
     var data
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
      if (data.length > 0){
