@@ -1,7 +1,10 @@
 
 
 function buy(cost,itemid){
+  currentinven = JSON.parse(localStorage.getItem("Inventory")
+                            
   console.log(""+cost+","+itemid+"")
+ if (currentinven.includes(itemid) == false){
   if (localStorage.getItem("cash") !== null){
     if (localStorage.getItem("cash") >= cost){
       localStorage.setItem("buyitem",itemid)
@@ -17,5 +20,7 @@ function buy(cost,itemid){
     localStorage.setItem("cash",0);
     console.log("Added Cash to LocalStorage.")
   }
+ }else{
+   console.log("Player already owns item!")
 }
   
