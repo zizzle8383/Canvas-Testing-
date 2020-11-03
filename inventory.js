@@ -20,12 +20,16 @@
    }
   
   loaddata = function(){
+    if (window.localStorage !== null){
     var data
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
-    if (data.length > 0){
+     if (data.length > 0){
       self.items = data
-      
-      }
+     }
+    }else{ 
+      window.localStorage.setitem("room","original")
+      window.localStorage.setitem("Inventory",JSON.parse(self.items))
+    }
      return;
     }
     
