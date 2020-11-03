@@ -15,3 +15,10 @@ body{
  
  right:25%;
 }
+#coins{
+ position:absolute;
+ right:0px;
+ top:0px;
+ width:30px;
+ border-style:solid;
+}
