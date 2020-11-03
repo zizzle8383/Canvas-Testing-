@@ -27,6 +27,7 @@
       self.items = data
        if (window.localStorage.getItem("buyitem") !== null){
          self.items.push(window.localStorage.getItem("buyitem"))
+         window.localStorage.setItem("buyitem",null)
      }
     }else{ 
       window.localStorage.setItem("room","original")
