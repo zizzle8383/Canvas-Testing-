@@ -48,4 +48,8 @@ display: inline-block;
 button{
  border-style:none;
 }
-
+#hatimg{
+ width:30px;
+ height:30px;
+ 
+}
