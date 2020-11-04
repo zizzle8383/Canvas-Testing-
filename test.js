@@ -43,6 +43,7 @@ function startGame() {
      document.getElementById("msg-send").style.visibility = "visible";
       document.getElementById("hat-test").style.visibility = "visible";
      document.getElementById("update-hat").style.visibility = "visible";
+     document.getElementById("Market").style.visibility = "visible";
     myMusic = new sound("./titleconcept.mp3");
     myMusic.play();
     myForeground = new component(850, 50, `./rooms/${room}/fg.png`, 0, 445, "image");
