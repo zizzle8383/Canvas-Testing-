@@ -58,6 +58,7 @@ option{
   border-style:none;
 }
 #Market{
+  position:absolute;
   display:inline-block;
   left:50%;
   right:50%;
