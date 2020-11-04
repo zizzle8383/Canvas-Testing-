@@ -9,13 +9,13 @@ body{
  background-color:lightblue;
  }
 .BuyBox{
-
+ position:absolute;
  background-color:white;
  text-align:center;
  border-style:solid;
  border-color:grey;
  width:50%;
- 
+ margin:25px;
  right:25%;
 }
 #coins{
