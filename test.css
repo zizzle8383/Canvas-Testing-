@@ -60,8 +60,8 @@ option{
 #Market{
   position:absolute;
   display:inline-block;
-  left:50%;
-  right:50%;
+  left:0%;
+  top:0%;
   border-style:none;
   background-color:blue;
 }
