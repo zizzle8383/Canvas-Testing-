@@ -25,7 +25,7 @@ function buy(cost,itemid){
       cash -= cost;
       localStorage.setItem("cash",cash)
       console.log("Bought"+itemid+"!")
-      
+    }
     }else{
       console.log("Not Enough Cash!")
     }
