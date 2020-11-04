@@ -7,6 +7,7 @@ function Setup(){
       console.log(shopitems)
       }else{
         console.log("User Has no items in cart.")
+      }
 }
 
 
@@ -25,7 +26,7 @@ function buy(cost,itemid){
       cash -= cost;
       localStorage.setItem("cash",cash)
       console.log("Bought"+itemid+"!")
-    }
+    
     }else{
       console.log("Not Enough Cash!")
     }
