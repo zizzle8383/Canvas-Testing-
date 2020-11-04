@@ -64,13 +64,14 @@ option{
   top:0%;
   border-style:none;
   background-color:blue;
+  
 }
 #Market:hover{
   background-color:darkblue;
-  border-style:solid;
+  
 }
 #TopBar{
- background-color:darkblue;
+ background-color:purple;
   top:0%;
   left:0%;
   position:fixed;
