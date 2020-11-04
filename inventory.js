@@ -24,9 +24,13 @@
     var data
     var data = JSON.parse(window.localStorage.getItem("Inventory"))
     if (window.localStorage.getItem("buyitem").length > 0){
+         
+        var i;
+        for (i = 0; i < window.localStorage.getItem("buyitem").length; i++) {
          console.log("push to items")
-         data.push(window.localStorage.getItem("buyitem"))
-         window.localStorage.setItem("buyitem","")          
+         data.push(window.localStorage.getItem("buyitem")[i])
+        }
+       window.localStorage.setItem("buyitem","")
      }else{console.log(window.localStorage.getItem("buyitem").length)}
     
      if (data.length > 0){
