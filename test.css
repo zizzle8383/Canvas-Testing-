@@ -57,3 +57,11 @@ input[type=text]{width:480px;}
 option{
   border-style:none;
 }
+#Market{
+  right:50%;
+  border-style:none;
+  background-color:blue;
+}
+#Market:hover{
+  background-color:darkblue;
+}
