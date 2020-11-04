@@ -1,3 +1,15 @@
+var shopitems = []
+
+
+function Setup(){
+  if (window.localStorage.getItem("buyitem") !== null){
+      shopitems = JSON.parse(window.localStorage.getItem("buyitem"))
+      console.log(shopitems)
+      }else{
+        console.log("User Has no items in cart.")
+}
+
+
 
 
 function buy(cost,itemid){
@@ -7,7 +19,8 @@ function buy(cost,itemid){
  if (currentinven.includes(itemid) == false){
   if (localStorage.getItem("cash") !== null){
     if (localStorage.getItem("cash") >= cost){
-      localStorage.setItem("buyitem",itemid)
+      shopitems.push(itemid)
+      localStorage.setItem("buyitem",JSON.stringify(shopitems))
       cash = localStorage.getItem("cash")
       cash -= cost;
       localStorage.setItem("cash",cash)
