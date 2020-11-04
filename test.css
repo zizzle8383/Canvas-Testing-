@@ -67,6 +67,7 @@ option{
 }
 #Market:hover{
   background-color:darkblue;
+  border-style:solid;
 }
 #TopBar{
  background-color:darkblue;
