@@ -58,6 +58,8 @@ option{
   border-style:none;
 }
 #Market{
+  display:inline-block;
+  left:50%;
   right:50%;
   border-style:none;
   background-color:blue;
