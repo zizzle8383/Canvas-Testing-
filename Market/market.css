@@ -9,7 +9,7 @@ body{
  background-color:lightblue;
  }
 .BuyBox{
- position:absolute;
+ position:relative;
  background-color:white;
  text-align:center;
  border-style:solid;
@@ -17,6 +17,7 @@ body{
  width:50%;
  margin:25px;
  right:25%;
+ display:inline-block;
 }
 #coins{
  position:absolute;
