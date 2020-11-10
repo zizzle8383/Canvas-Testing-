@@ -64,11 +64,11 @@ option{
   top:0%;
   height:20px;
   border-style:none;
-  background-color:blue;
+  background-color:#880085;
   
 }
 #Market:hover{
-  background-color:darkblue;
+  background-color:#871F78;
   
 }
 #TopBar{
