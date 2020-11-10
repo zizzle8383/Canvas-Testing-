@@ -1,5 +1,10 @@
 var mystorage =  window.localStorage
-
+var playersprites = {
+	front:"player/blockyfront.png",
+	back:"player/blockyback.png",
+	left:"player/blockyleft.png",
+	right"player/blockyright.png",
+}
 var myGamePiece;
 var myMsg;
 var myMusic;
@@ -70,6 +75,10 @@ var myGameArea = {
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
         updateGameArea()
+	myGamePiece.image.src = playersprites.back
+        myGamePiece.image.src = playersprites.left
+	myGamePiece.image.src = playersprites.right
+	myGamePiece.image.src = playersprites.front
         walking = false;
         document.getElementById("canvas-container").insertBefore(this.canvas, null);
         window.addEventListener("keydown", function (e) {
@@ -289,16 +298,16 @@ function updateChar() {
 
 function updatecharsprites(){
      if (vpos.x > myGamePiece.x + 100){
-	     myGamePiece.image.src = "player/blockyright.png"
+	     myGamePiece.image.src = playersprites.right
 	     
      }else if(vpos.x < myGamePiece.x-50){
-	     myGamePiece.image.src = "player/blockyleft.png"
+	     myGamePiece.image.src = playersprites.left
 	     
      }else if(vpos.y < myGamePiece.y){
-	     myGamePiece.image.src = "player/blockyback.png"
+	     myGamePiece.image.src = playersprites.back
 	     
      }else if(vpos.y > myGamePiece.y){
-	     myGamePiece.image.src = "player/blockyfront.png"
+	     myGamePiece.image.src = playersprites.front
      }
 	       
 
