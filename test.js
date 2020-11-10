@@ -75,10 +75,12 @@ var myGameArea = {
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
         updateGameArea()
-	myGamePiece.image.src = playersprites.back
+	    for (var v = 0; v > 3; v++){
+        myGamePiece.image.src = playersprites.back
         myGamePiece.image.src = playersprites.left
 	myGamePiece.image.src = playersprites.right
 	myGamePiece.image.src = playersprites.front
+	}
         walking = false;
         document.getElementById("canvas-container").insertBefore(this.canvas, null);
         window.addEventListener("keydown", function (e) {
