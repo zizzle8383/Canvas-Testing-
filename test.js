@@ -3,7 +3,7 @@ var playersprites = {
 	front:"player/blockyfront.png",
 	back:"player/blockyback.png",
 	left:"player/blockyleft.png",
-	right"player/blockyright.png",
+	right"player/blockyright.png"
 }
 var myGamePiece;
 var myMsg;
