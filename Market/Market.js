@@ -13,7 +13,7 @@ function Setup(){
 
 
 
-function buy(cost,itemid){
+function buy(itemid,cost){
   currentinven = JSON.parse(localStorage.getItem("Inventory"))
                             
   console.log(""+cost+","+itemid+"")
