@@ -53,3 +53,10 @@ button{
  height:30px;
  
 }
+.bottom{
+ width:100%;
+ left:0px;
+ bottom:0;
+ position:fixed;
+ background-color:lightblue;
+}
