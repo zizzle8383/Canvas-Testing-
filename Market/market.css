@@ -53,10 +53,10 @@ button{
  height:30px;
  
 }
-.bottom{
+.down{
  width:100%;
  left:0px;
- bottom:0;
+ bottom:0px;
  position:fixed;
  background-color:lightblue;
 }
