@@ -14,28 +14,31 @@ function Setup(){
 
 
 function buy(itemid,cost){
-  currentinven = JSON.parse(localStorage.getItem("Inventory"))
-                            
-  console.log(""+cost+","+itemid+"")
- if (currentinven.includes(itemid) == false){
-  if (localStorage.getItem("cash") !== null){
-    if (localStorage.getItem("cash") >= cost){
-      shopitems.push(itemid)
-      localStorage.setItem("buyitem",JSON.stringify(shopitems))
-      cash = localStorage.getItem("cash")
-      cash -= cost;
-      localStorage.setItem("cash",cash)
-      console.log("Bought"+itemid+"!")
+  
+ currentinven = JSON.parse(localStorage.getItem("Inventory"))
+ var cfirm = confirm("Are you sure you want to buy item "+itemid+"?")
+ console.log(""+cost+","+itemid+"")
+ if (cfirm == true){
+  if (currentinven.includes(itemid) == false){
+   if (localStorage.getItem("cash") !== null){
+     if (localStorage.getItem("cash") >= cost){
+       shopitems.push(itemid)
+       localStorage.setItem("buyitem",JSON.stringify(shopitems))
+       cash = localStorage.getItem("cash")
+       cash -= cost;
+       localStorage.setItem("cash",cash)
+       console.log("Bought"+itemid+"!")
     
-    }else{
-      console.log("Not Enough Cash!")
-    }
+     }else{
+       console.log("Not Enough Cash!")
+     }
+   }else{
+     localStorage.setItem("cash",0);
+     console.log("Added Cash to LocalStorage.")
+   }
   }else{
-    localStorage.setItem("cash",0);
-    console.log("Added Cash to LocalStorage.")
+    console.log("Player already owns item!")
   }
- }else{
-   console.log("Player already owns item!")
  }
 }
   
