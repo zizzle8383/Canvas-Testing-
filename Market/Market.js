@@ -28,16 +28,19 @@ function buy(itemid,cost){
        cash -= cost;
        localStorage.setItem("cash",cash)
        console.log("Bought"+itemid+"!")
-    
+       alert("Item Purchased!")
      }else{
        console.log("Not Enough Cash!")
+       alert("You dont have enough cash!")
      }
    }else{
      localStorage.setItem("cash",0);
      console.log("Added Cash to LocalStorage.")
+     alert("You dont have enough cash!")
    }
   }else{
     console.log("Player already owns item!")
+    alert("You already own this item!")
   }
  }
 }
