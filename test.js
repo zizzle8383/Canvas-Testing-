@@ -1,9 +1,9 @@
 var mystorage =  window.localStorage
 var playersprites = {
-	front:"player/blockyfront.png",
-	back:"player/blockyback.png",
-	left:"player/blockyleft.png",
-	right:"player/blockyright.png"
+	front:"player/llama_front.png",
+	back:"player/llama_back.png",
+	left:"player/llama_left.png",
+	right:"player/llama_right.png"
 }
 var myGamePiece;
 var myMsg;
@@ -53,7 +53,7 @@ function startGame() {
     myMusic.play();
     myForeground = new component(850, 50, `./rooms/${room}/fg.png`, 0, 445, "image");
     myMsg = new component("10px", "Courier New", "black", 280, 40, "text");
-    myGamePiece = new component(50, 50, "./player/blockyfront.png", 425, 240, "image");
+    myGamePiece = new component(47.71, 47.71, "./player/blockyfront.png", 425, 240, "image");
     myNextArea =new component(50, 480, "./bordertest.png", 800, 0, "image");
     myPrevArea =new component(50, 480, "./bordertest.png", 0, 0, "image");
     myBackground = new component(850, 480, `rooms/${room}/bg.png`, 0, 0, "image");
