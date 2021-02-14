@@ -1,4 +1,4 @@
-var socket = new WebSocket("ws://localhost:8080")
+var socket = new WebSocket("wss://localhost:8080")
 
 socket.onopen = function (event){
 socket.send("Test!")
